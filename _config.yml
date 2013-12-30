@@ -2,3 +2,7 @@ name: Your New Jekyll Site
 markdown: redcarpet
 pygments: false
 permalink: /:year/:month/:day/:title/
+
+# Disqus Comments
+disqus_short_name: lmaran
+disqus_show_comment_count: true

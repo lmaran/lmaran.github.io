@@ -2,6 +2,7 @@
 layout: post
 title:  "Mi-am mutat blog-ul"
 date:   2010-11-21 00:06:31
+comments: true
 ---
 
 **Platforma** - [WordPress](http://wordpress.com)
