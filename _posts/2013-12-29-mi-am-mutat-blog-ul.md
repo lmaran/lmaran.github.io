@@ -4,8 +4,6 @@ title:  "Mi-am mutat blog-ul"
 date:   2010-11-21 00:06:31
 ---
 
-## Mi-am mutat blog-ul ##
-
 **Platforma** - [WordPress](http://wordpress.com)
 
 Am ramas pe WordPress. Este,  probabil, cel mai cunoscut sistem de blogging iar dezavantajul (pt. mine) de a fi scris in PHP este compensat de notorietatea si suportul tehnic oferit. Articolele scrise pana acum raman la vechea adresa.
