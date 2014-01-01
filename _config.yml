@@ -1,5 +1,5 @@
 name: Your New Jekyll Site
-markdown: redcarpet
+markdown: rdiscount
 pygments: false
 permalink: /:year/:month/:day/:title/
 
