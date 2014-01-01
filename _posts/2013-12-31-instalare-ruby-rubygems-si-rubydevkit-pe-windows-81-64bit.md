@@ -45,7 +45,7 @@ Metoda recomandata este prin [Ruby installer](http://rubyinstaller.org). Acesta 
  
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014-01-01-installed-rubydevkit.png)
 
-### 2. Testare instalarii
+### 2. Testarea instalarii
 
 - `gem install json --platform=ruby`
 - `ruby -rubygems -e "require 'json'; puts JSON.load('[42]').inspect"` 
