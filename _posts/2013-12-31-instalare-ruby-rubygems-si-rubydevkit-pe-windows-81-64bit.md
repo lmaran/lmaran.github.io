@@ -16,7 +16,8 @@ Metoda recomandata este prin [Ruby installer](http://rubyinstaller.org). Acesta 
 - am folosit versiunea [Ruby 2.0.0-p353 (x64)](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.0.0-p353-x64.exe?direct)
 - instalarea se lanseaza automat la download
 - instalare in calea default (*C:\Ruby200-x64*), toate cele 3 bife activate
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2013-12-31-installed-ruby.png)
+
+ ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2013-12-31-installed-ruby.png)
 
 #### 2. Verificarea instalarii
 
@@ -42,7 +43,7 @@ Metoda recomandata este prin [Ruby installer](http://rubyinstaller.org). Acesta 
  2. `ruby dk.rb init` (ca rezultat se creaza fisierul "_C:\Ruby200-x64-DevKit\config.yml_" care va contine calea catre folder-ul de ruby, adica "_- C:/Ruby200-x64_")
  3. `ruby dk.rb install`
  
-  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014-01-01-installed-rubydevkit.png)
+ ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014-01-01-installed-rubydevkit.png)
 
 #### 2. Testare instalarii
 
@@ -57,16 +58,19 @@ Metoda recomandata este prin [Ruby installer](http://rubyinstaller.org). Acesta 
 
 Am facut o lista cu cele mai uzuale comenzi. Este strictul de necesar pe care l-am folosit incercand sa-mi instalez Jekyll-ul. O descriere completa gasesti [aici](http://guides.rubygems.org/command-reference/).
 
-**Install/Uninstal**l cmds:
+**Install/Uninstall** cmds:
+
 - `gem install mysql`
 - `gem install mysql --pre` (pre-release)
 - `gem uninstall mysql`
 
 **List/Search** cmds:
+
 - `gem list` - list all installed gems
 - `gem search mysql` - search for a specific gem
 
 **Update/Clean** cmds:
+
 - `gem -v` - get gem version
 - `gem update --system` - actualizeaza package manager-ul
 - `ruby update` - updateaza toate gem-urile
