@@ -37,3 +37,4 @@ Observatii:
 
 - In final, site-ul functional se poate verifica la adresa: "_http://localhost:4000_":
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014-01-01-testing-jekyll-url.png)
+- OBS: lansat cu parametrul _-w (watch)_, serviciul Jekyll reconstruieste site-ul "on-the-fly", pe masura ce apar modificari: `jekyll serve -w`
