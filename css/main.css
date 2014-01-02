@@ -158,3 +158,36 @@ a:visited { color: #a0a; }
 .post pre.terminal code {
   background-color: #333;
 }
+
+/*****************************************************************************/
+/*
+/* Dadi (custom styles)
+/*
+/*****************************************************************************/
+
+h1 {
+  font-size:175%;
+  line-height: normal;
+}
+
+h2 {
+  font-size:150%;
+  margin:30px 0;
+}
+
+h3 {
+  font-size:120%;
+  margin:20px 0;
+}
+
+.site {
+  text-align: left;
+}
+
+body {
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+}
