@@ -8,6 +8,37 @@ categories: C# AzureTable
 
 [Cod + Live Demo](https://compilify.net/r7/5) (comanda "run")
 
+## Codul folosit: ##
+
+```csharp
+// ----------------------------------------------------------------------------------
+// lucianmaran@hotmail.com, 20.04.2012, c-helper-incrementedstring-alternativa-la-startswith-pentru-azure-table
+// ----------------------------------------------------------------------------------
+// Description:
+// 		Increment a given string (ex: "x2a" -> "x2b")
+//		Usefull for "Start with" sorting in Azure Table Storage,http://www.dotnetsolutions.co.uk/blog/starts-with-query-pattern---windows-azure-table-design-patterns
+// ----------------------------------------------------------------------------------
+ 
+public static string IncrementedString(string str)
+{
+    if(String.IsNullOrEmpty(str)) 
+        return" "; //first vizibile ch.
+    
+    char lastChar = str.Last();
+    if(lastChar=='~') //last vizibil ch.
+        return String.Format("{0}{1}",str.Substring(0,str.Length-1), "~ "); //add first visible ch.
+    
+    char incrementedLastChar = Convert.ToChar((Convert.ToInt32(lastChar) + 1));
+    return String.Format("{0}{1}",str.Substring(0,str.Length-1), incrementedLastChar.ToString());
+}
+```
+
+## Test: ##
+
+```csharp
+return IncrementedString("X2a");
+```
+
 Incrementeaza valoare unui string (ex: "x2a" -> "x2b").
 
 Windows Azure Table nu suporta  interogari cu metoda StartsWith(). Prin urmare, singura solutie de a identifica acele inregistrari care incep cu un anumit substring presupune doua operatii de comparare:
