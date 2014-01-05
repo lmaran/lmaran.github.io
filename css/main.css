@@ -191,3 +191,8 @@ body {
 img {
   max-width: 100%;
 }
+
+.site {
+  font-size: 115%;
+  width: 60em;
+}
