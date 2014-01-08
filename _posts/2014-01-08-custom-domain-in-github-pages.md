@@ -7,13 +7,16 @@ categories: jekyll
 ---
 
 Procedura oficiala este descrisa [aici](https://help.github.com/articles/setting-up-a-custom-domain-with-pages).
+
 Concret, in cazul blog-ului personal (un site de tipul *[User&Organization Page](https://help.github.com/articles/user-organization-and-project-pages)*), pasii parcursi au fost:
 
 ## Configurare site Jekyll (Github repository) ##
 
 - adauga un fisier cu numele `CNAME` in radacina repository-ului
+
   ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/cname.png)
 - adauga in fisierul CNAME domeniul dorit (`maran.ro`). 
+
   ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/cname-content.png)
 
 ## Configurare DNS ##
@@ -25,3 +28,9 @@ Concret, in cazul blog-ului personal (un site de tipul *[User&Organization Page]
 	- **o singura** inreg. de tip **A**
 	- **o singura** inreg. de tip **CNAME** 
 - asadar, daca vrei sa adaugi si alte subdomenii in afara de "*www*" (ex: *lucian.maran.ro*) atunci esti nevoit sa apelezi la un HTTP redirect, ca in poza de mai sus.
+
+## Final ##
+
+In acest moment, tot traficul este redirectat catre acelasi domeniu (maran.ro) chiar si atunci cand site-ul este apelat cu subdomeniiile "*www*" sau "*lucian*" - perfect d.p.d.v. al SEO.
+
+![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/custom-domain-ok.png)
