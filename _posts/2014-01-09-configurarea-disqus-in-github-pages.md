@@ -6,15 +6,15 @@ comments: true
 categories: jekyll
 ---
 
-Disqus este una dintre cele mai cunoscute platforme de "Comments". In continuare am sa amintesc setarile pe care le-am facut pt. a integra aceasta platforma cu [blog-ul personal](http://maran.ro).
+[Disqus](http://disqus.com/) este una dintre cele mai cunoscute platforme de "Comments". In continuare am sa amintesc setarile facute de mine pt. a integra aceasta platforma cu [blog-ul personal](http://maran.ro).
 
 In continuare voi presupune urmatoarele:
 
-- site-ul este deja functional si ruleaza in Github Pages
+- site-ul este deja functional si ruleaza cu [Jekyll](http://jekyllrb.com/), in [Github Pages](http://pages.github.com/)
 - site-ul este configurat cu custom domain = "http://maran.ro"
-- [**important**] serviciul de DNS a fost configurat iar modificarile au avut timp suficient sa se propage (ex:24h). Detalii despr configurarea *DNS* si *Custom Domain* [aici](http://maran.ro/2014/01/08/custom-domain-in-github-pages/).
+- [**important**] serviciul de DNS a fost configurat iar modificarile au avut timp suficient sa se propage (ex:24h). Detalii despre configurarea *DNS* si *Custom Domain*  am scris [aici](http://maran.ro/2014/01/08/custom-domain-in-github-pages/).
 
-## Configurari pe site-ul disqus.com ##
+## Configurari pe site-ul Disqus.com ##
 
 - login pe [http://disqus.com](http://disqus.com)
 - creaza un site nou:
@@ -31,6 +31,8 @@ In continuare voi presupune urmatoarele:
  disqus_short_name: lmaran
  disqus_show_comment_count: true
  ```
+	- ultima setare este optionala
+	- **important** este ca `disqus_short_name` sa fie identic cu identificatorul site-ului creat in Disqus
 - adauga la sfarsitul fisierului `\_layouts\post.html` urmatorul cod (nemodificat):
 
  ```javascript
@@ -70,14 +72,22 @@ In continuare voi presupune urmatoarele:
  comments: true
  ``` 
 
-## Observatii finale##
+## Rezultatul ##
+
+![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/disqus-demo.png)
+
+Acelasi thread de comentarii este vizibil si atunci cand testez site-ul pe masina locala (**localhost**):
+
+![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/disqus-demo-localhost.png)
+## Observatii finale ##
 
 - daca in Disqus am ales **lmaran** pe post de identificator unic al site-ului, atunci comentariile vor putea fi moderate la adresa: [http://lmaran.disqus.com](http://lmaran.disqus.com)
 - lasa nemodificata (camp gol) sectiunea "*Trusted Domains*" de pe site-ul Disqus.
 - am declarat ca si identificator de pagina (**disqus_identifier**) URL-ul articolului.  Am avut grija ca URL-ul sa fie identic (folosind variabila `url` declarata in `_config.yml`) chiar si atunci cand site-ul este rulat de pe localhost (Jekyll local). In caz contrar, in sectiunea "Discussions" de pe site-ul Disqus am fi avut acelasi articol de 2 ori, fiecare cu propriul thread de comment-uri:
 	- **title**: articol1; **link**: http://localhost:4000/2014/10/01/articol1
 	- **title**: articol1; **link**: http://maran.ro/2014/10/01/articol1
+- daca stergi din Disqus site-ul cu comentarii aferent blog-ului si apoi il refaci folosind **acelasi identificator de site**, atunci sectiunea de comentarii din blog va redeveni functionala, fara nici o alta modificare. Desigur, vechile comentarii vor disparea.
 - detalii despre variabilele **disqus**, [aici](http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables)
 - detalii despre variabilele **jekyll**, [aici](http://jekyllrb.com/docs/variables/)
 
-**Inspiratie:** setarile Javascript de mai sus reprezinta o combinatie dintre [setarile disqus originale](http://help.disqus.com/customer/portal/articles/472097-universal-embed-code) si setarile aferente [blog-ului lui Phill Haack](https://github.com/Haacked/haacked.com).
+**Inspiratie:** setarile Javascript de mai sus reprezinta o combinatie dintre [setarile disqus originale](http://help.disqus.com/customer/portal/articles/472097-universal-embed-code) si setarile preluate de pe [blog-ul lui Phill Haack](https://github.com/Haacked/haacked.com).
