@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Configurarea Disqus in GithubPages"
+title:  "Configurarea Disqus in Github Pages"
 date:   2014-01-09 00:00:01
 comments: true
 categories: jekyll
@@ -83,7 +83,7 @@ Acelasi thread de comentarii este vizibil si atunci cand testez site-ul pe masin
 
 - daca in Disqus am ales **lmaran** pe post de identificator unic al site-ului, atunci comentariile vor putea fi moderate la adresa: [http://lmaran.disqus.com](http://lmaran.disqus.com)
 - lasa nemodificata (camp gol) sectiunea "*Trusted Domains*" de pe site-ul Disqus.
-- am declarat ca si identificator de pagina (**disqus_identifier**) URL-ul articolului.  Am avut grija ca URL-ul sa fie identic (folosind variabila `url` declarata in `_config.yml`) chiar si atunci cand site-ul este rulat de pe localhost (Jekyll local). In caz contrar, in sectiunea "Discussions" de pe site-ul Disqus am fi avut acelasi articol de 2 ori, fiecare cu propriul thread de comment-uri:
+- am declarat ca si identificator de pagina (**disqus_identifier**) URL-ul articolului.  Am avut grija ca URL-ul sa fie identic (folosind variabila `url` declarata in `_config.yml`), chiar si atunci cand site-ul este rulat de pe localhost (Jekyll local). In caz contrar, in sectiunea "Discussions" de pe site-ul Disqus am fi avut acelasi articol de 2 ori, fiecare cu propriul thread de comment-uri:
 	- **title**: articol1; **link**: http://localhost:4000/2014/10/01/articol1
 	- **title**: articol1; **link**: http://maran.ro/2014/10/01/articol1
 - daca stergi din Disqus site-ul cu comentarii aferent blog-ului si apoi il refaci folosind **acelasi identificator de site**, atunci sectiunea de comentarii din blog va redeveni functionala, fara nici o alta modificare. Desigur, vechile comentarii vor disparea.
