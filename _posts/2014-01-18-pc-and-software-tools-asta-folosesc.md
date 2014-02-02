@@ -8,7 +8,7 @@ categories: tools
 
 Imi propun sa tin actualizata lista de mai jos, asa ca o voi modifica de cate ori va fi cazul.
 
-**Actualizat**: 20.01.2013 
+**Actualizat**: 02.02.2014 
 
 ## PC tools ##
 
@@ -69,6 +69,7 @@ Imi propun sa tin actualizata lista de mai jos, asa ca o voi modifica de cate or
 - [Google](https://sites.google.com/site/smmahbub/g-mail-pop3-and-smtp-settings) - SMTP email server
 - [JsFiddle](http://jsfiddle.net/) - testare (si partajare) cod Js/Css/Html
 - [Gist](https://gist.github.com/) - partajare fragmente de cod, orice limbaj (snippets)
+- [OneNote](http://www.onenote.com/) - editare si sincronizare note pe mobil si desktop (**new**)
 
 Exceptand Azure si DNSimple, pentru toate celelalte folosesc pachetele gratuite.
 
