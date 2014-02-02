@@ -23,13 +23,14 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
 	- Owin
 
 3. `Install-Package Microsoft.Owin.Host.SystemWeb` - pt. WebApi hostat in IIS (cu ASP.NET pipeline)
-	OBS: daca vrei o hostare de tip "self host" (fara "IIS" si ASP.NET) atunci in loc de pachetul de mai sus se instaleaza pachetul `Microsoft.Owin.Host.HttpListener`
+	
+ OBS: daca vrei o hostare de tip "self host" (fara "IIS" si ASP.NET) atunci in loc de pachetul de mai sus se instaleaza `Microsoft.Owin.Host.HttpListener`
 
 4. dll-urile referentiate pana acum (legate de OWIN) ar fi urmatoarele:
  
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/owin-references.png)
 
-5. Creaza in radacina proiectului un fisier numit `Startup.cs` cu urmatorul continut:
+5. creaza in radacina proiectului un fisier numit `Startup.cs` cu urmatorul continut:
 
 	```csharp
 	using Owin;
@@ -53,7 +54,7 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
  
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/test-owin-only-ok.png)
 
- OBS: Desigur ca pt. testul de mai sus sunt necesare doar pachetele OWIN (nu si cele WebApi). Am preferat insa instalarea celor doua pachete pt. a reduce nr. de operatii necesare in pasii ce urmeaza
+ OBS: Desigur ca pt. testul de mai sus sunt necesare doar pachetele OWIN (nu si cele WebApi). Am preferat insa instalarea celor doua pachete (amintite la pasii 2 si 3 ) pt. a reduce nr. de operatii necesare in pasii ce urmeaza.
 
 ## "Hello world" - OWIN si WebApi ##
 
@@ -104,7 +105,7 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/webapi-owin-files-config1.png)
 
-11. la rularea aplicatiei ar trebui sa primim mesajul "hello world" returnat de controller:
+11. iar la rularea aplicatiei ar trebui sa primim mesajul "hello world", returnat de controller:
 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/webapi-response-ok1.png)
 
@@ -151,7 +152,7 @@ Adica la start (in HomeController) voi returna un fisier static (index.html) iar
  
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/webapi-response-ok2.png)
 
-4. adaugam in radacina proiectului un fisier simplu, de tip html:
+4. adaug in radacina proiectului un fisier simplu, de tip html:
 
 	```html
 	<!DOCTYPE html>
@@ -165,17 +166,17 @@ Adica la start (in HomeController) voi returna un fisier static (index.html) iar
 	</html>
 	```
 
-5. iar in `HomeController` modificam metoda `Get()` astfel:
+5. iar in `HomeController` modific metoda `Get()` astfel:
 
 	```csharp
-	        public HttpResponseMessage Get(){
-	            var filePath = HostingEnvironment.MapPath("~/index.html");
+	public HttpResponseMessage Get(){
+	    var filePath = HostingEnvironment.MapPath("~/index.html");
 	
-	            var response = new HttpResponseMessage(HttpStatusCode.OK);
-	            response.Content = new StringContent(File.ReadAllText(filePath));
-	            response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
-	            return response;
-	        }
+	    var response = new HttpResponseMessage(HttpStatusCode.OK);
+	    response.Content = new StringContent(File.ReadAllText(filePath));
+	    response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
+	    return response;
+	}
 	```
 6. test (se observa ca numele `index.html` nu apare in URL):
  
