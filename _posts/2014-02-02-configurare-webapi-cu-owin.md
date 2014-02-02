@@ -9,7 +9,7 @@ categories: WebApi Owin
 Voi pleca de la un proiect complet gol.
 Voi adauga apoi bibliotecile si setarile **minim** necesare a.i proiectul de tip WebApi obtinut sa functioneze ca o suma de module interconectate dupa specificatiile [OWIN](http://owin.org/).
 
-Codul de mai jos e disponibil pe [github](https://github.com/lmaran/DemoOwin/tree/master/InstallWebApiOwinIIS).
+Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/tree/master/InstallWebApiOwinIIS).
 
 ## "Hello world" - doar cu OWIN ##
 
@@ -26,6 +26,7 @@ Codul de mai jos e disponibil pe [github](https://github.com/lmaran/DemoOwin/tre
 	OBS: daca vrei o hostare de tip "self host" (fara "IIS" si ASP.NET) atunci in loc de pachetul de mai sus se instaleaza pachetul `Microsoft.Owin.Host.HttpListener`
 
 4. dll-urile referentiate pana acum (legate de OWIN) ar fi urmatoarele:
+ 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/owin-references.png)
 
 5. Creaza in radacina proiectului un fisier numit `Startup.cs` cu urmatorul continut:
@@ -49,6 +50,7 @@ Codul de mai jos e disponibil pe [github](https://github.com/lmaran/DemoOwin/tre
 	}
 	```
 6. test OWIN (fara WebApi):
+ 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/test-owin-only-ok.png)
 
  OBS: Desigur ca pt. testul de mai sus sunt necesare doar pachetele OWIN (nu si cele WebApi). Am preferat insa instalarea celor doua pachete pt. a reduce nr. de operatii necesare in pasii ce urmeaza
@@ -146,7 +148,9 @@ Adica la start (in HomeController) voi returna un fisier static (index.html) iar
     }
 	```
 3. test:
+ 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/webapi-response-ok2.png)
+
 4. adaugam in radacina proiectului un fisier simplu, de tip html:
 
 	```html
@@ -174,4 +178,5 @@ Adica la start (in HomeController) voi returna un fisier static (index.html) iar
 	        }
 	```
 6. test (se observa ca numele `index.html` nu apare in URL):
+ 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/webapi-response-ok3.png)
