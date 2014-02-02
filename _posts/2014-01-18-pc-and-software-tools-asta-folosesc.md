@@ -8,7 +8,11 @@ categories: tools
 
 Imi propun sa tin actualizata lista de mai jos, asa ca o voi modifica de cate ori va fi cazul.
 
+<<<<<<< HEAD
 **Actualizat**: 02.02.2014 
+=======
+**Actualizat**: 20.01.2013 
+>>>>>>> ba41160f10c9adba9c98ba7132544ae1409ef878
 
 ## PC tools ##
 
@@ -29,6 +33,7 @@ Imi propun sa tin actualizata lista de mai jos, asa ca o voi modifica de cate or
 - [Adobe reader](http://get.adobe.com/ro/reader/) - (`cinst adobereader`)
 - [Process Explorer](http://technet.microsoft.com/en-us/sysinternals/bb896653) (`cinst procexp`) - imi arata ce proces foloseste un anumit fisier (util atunci cand nu-l pot sterge)
 - [PNGGauntlet](http://pnggauntlet.com/) - comprima PNG-uri fara a pierde din calitate. Castigul de spatiu este de aprox 30% (masurat)
+- [ConEmu](https://code.google.com/p/conemu-maximus5/) (`cinst ConEmu`) - wrapper (GUI) peste diferite console: "cmd.exe", "powershel.exe" etc. Suporta tabs, resize window, Ctrl+V etc. Detalii [aici](http://www.hanselman.com/blog/ConEmuTheWindowsTerminalConsolePromptWeveBeenWaitingFor.aspx). (**new**)
  
 ## Software tools ##
 
