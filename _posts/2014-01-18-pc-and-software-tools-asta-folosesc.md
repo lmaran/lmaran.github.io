@@ -8,7 +8,7 @@ categories: tools
 
 Imi propun sa tin actualizata lista de mai jos, asa ca o voi modifica de cate ori va fi cazul.
 
-**Actualizat**: 19.01.2013 
+**Actualizat**: 02.02.2014 
 
 ## PC tools ##
 
@@ -52,7 +52,7 @@ Imi propun sa tin actualizata lista de mai jos, asa ca o voi modifica de cate or
 ## Online tools (*aaS) ##
 
 - [Azure](http://www.windowsazure.com/) - webhosting (mutat de la Appharbor), NoSql, VM, Active Directory etc
-- [Bitbucket](https://bitbucket.org/) - permite repository-uri **private** (gratuit)
+- [Bitbucket](https://bitbucket.org/) - permite repository-uri private (gratuit)
 - [Gliffy](http://www.gliffy.com/) - un fel de Visio pt. diagrame online
 - [Trello](https://trello.com/) - gestionare proiecte si task-uri personale
 - [Dropbox](https://www.dropbox.com/) - sincronizare si partajare de fisiere
@@ -68,6 +68,7 @@ Imi propun sa tin actualizata lista de mai jos, asa ca o voi modifica de cate or
 - [Google](https://sites.google.com/site/smmahbub/g-mail-pop3-and-smtp-settings) - SMTP email server
 - [JsFiddle](http://jsfiddle.net/) - testare (si partajare) cod Js/Css/Html
 - [Gist](https://gist.github.com/) - partajare fragmente de cod, orice limbaj (snippets)
+- [OneNote](http://www.onenote.com/) - editare si sincronizare note pe mobil si desktop
 
 Exceptand Azure si DNSimple, pentru toate celelalte folosesc pachetele gratuite.
 
