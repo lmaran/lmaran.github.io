@@ -10,7 +10,6 @@ Imi propun sa tin actualizata lista de mai jos, asa ca o voi modifica de cate or
 
 **Actualizat**: 20.01.2013 
 
-
 ## PC tools ##
 
 - [Chocolately](http://chocolatey.org/) - majoritatea aplicatiilor le am instalate cu acest Package Manager.  Instalare si dezinstalare cu `cinst` si `cuninst`.
