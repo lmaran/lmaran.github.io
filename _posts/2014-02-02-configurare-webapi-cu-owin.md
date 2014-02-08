@@ -50,6 +50,19 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
 	    }
 	}
 	```
+
+ ...sau, acelasi lucru in varianta "async"
+
+	```csharp
+	...
+	app.Run(async context =>
+	{
+	    context.Response.ContentType = "text/plain";
+	    await context.Response.WriteAsync("Hello World!");
+	});
+	...
+	```
+
 6. test OWIN (fara WebApi):
  
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/test-owin-only-ok.png)
