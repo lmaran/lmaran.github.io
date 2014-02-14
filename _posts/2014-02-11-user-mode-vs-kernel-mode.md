@@ -45,7 +45,7 @@ Alte observatii:
 
 ### User mode (Ring 3) ###
 
- - exceptand procesul numit "System", toate procesele lansate de catre Windows ruleaza in `user mode`.
+ - exceptand procesul numit "System", toate celelalte procese lansate de catre Windows ruleaza in `user mode`.
  - majoritate aplicatiile instalate de utilizator opereaza tot in `user mode`. Exceptie fac, printre altele:
   - driver-ul video
   - modulul HTTP.sys din IIS (pt. a asigura o mai buna performanta):
