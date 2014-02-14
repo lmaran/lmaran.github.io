@@ -45,6 +45,7 @@ Alte observatii:
 
 ### User mode (Ring 3) ###
 
+ - un cod care ruleaza in `user mode` nu poate apela direct resursele hardware sau memoria. Daca totusi vrea sa o faca, trbuie sa apeleze la apeluri sistem (system API) care ruleaza in `kernel mode`.
  - exceptand procesul numit "System", toate celelalte procese lansate de catre Windows ruleaza in `user mode`.
  - majoritate aplicatiile instalate de utilizator opereaza tot in `user mode`. Exceptie fac, printre altele:
   - driver-ul video
