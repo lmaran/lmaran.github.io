@@ -25,13 +25,13 @@ In principal procesoarele (ma refer aici la Intel) folosesc 2 moduri de operare:
 
  - numit si *real mode*
  - Ring 1 si 2 sunt in general nefolosite
- - ofera un acces limitat la resurse. Spre exemplu, majoritatea proceselor  si aplicatiilor instalate pe Windows implica comutarea CPU-ului in `user mode`, primind astfel acces doar la o anumita parte din memorie. Aceasta memorie se mai numeste si **memorie virtuala** pt. ca procesul este "pacalit" sa creada ca i s-a pus la dispozitie intreaga memorie reala. Mai mult, nici adresele pe care le foloseste aplicatia nu sunt de cele reale ci sunt decalate cu un "offset" fata de mem. fizica.
- - neavand zone comune, orice eroare aparuta la nivelul unui proces nu afecteaza celelalte procese
+ - ofera un acces limitat la resurse. Spre exemplu, majoritatea proceselor  si aplicatiilor instalate pe Windows implica *comutarea* CPU-ului in `user mode`, primind astfel acces doar la o anumita parte din memorie. Aceasta memorie se mai numeste si **memorie virtuala** pt. ca procesul este "pacalit" sa creada ca i s-a pus la dispozitie intreaga memorie reala. Mai mult, nici adresele pe care le foloseste aplicatia nu sunt de cele reale ci sunt decalate cu un "offset" fata de mem. fizica.
+ - neavand zone comune de memorie, orice eroare aparuta la nivelul unui proces nu afecteaza celelalte procese
 
 Alte observatii: 
 
-- comutarea CPU-ului dintr-un mod in altul se realizeaza prin intermediul unor [intreruperi](http://en.wikipedia.org/wiki/Inter-processor_interrupt). 
-- operatia de *comutare* implica un anumit cost (necesita o salvare a  contextului a.i., la revenire, CPU-ul sa poata continua operatiile din locul in care a ramas)
+- *comutarea* CPU-ului dintr-un mod in altul se realizeaza prin intermediul unor [intreruperi](http://en.wikipedia.org/wiki/Inter-processor_interrupt). 
+- operatia de *comutare* implica un anumit "cost" (necesita o salvare a  contextului a.i., la revenire, CPU-ul sa poata continua operatiile din locul in care a ramas)
 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/cpu-rings.png)
 
@@ -39,13 +39,14 @@ Alte observatii:
 
 ### Kernel mode ###
 
- - partea cea mai importanta din SO Windows ([HAL](http://en.wikipedia.org/wiki/Hardware_abstraction)-ul, kernel-ul, majoritatea driverelor etc) opereaza in `kernel mode`. Exceptie fac procesele care se instaleaza odata cu Windows-ul. Acestea operaza in `user mode`, ele nefiind  altceva decat niste utilitare obisnuite.  
+ - partea cea mai importanta din SO Windows ([HAL](http://en.wikipedia.org/wiki/Hardware_abstraction)-ul, kernel-ul, majoritatea driverelor etc) opereaza in `kernel mode`. Exceptie fac procesele care se instaleaza odata cu Windows-ul.  
 
   ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/windows-user-and-kernel-mode.png)
 
 ### User mode (Ring 3) ###
 
- - majoritate aplicatiile instalate de utilizator opereaza un `user mode`. Exceptie fac, printre altele:
+ - exceptand procesul numit "System", toate procesele lansate de catre Windows ruleaza in `user mode`.
+ - majoritate aplicatiile instalate de utilizator opereaza tot in `user mode`. Exceptie fac, printre altele:
   - driver-ul video
   - modulul HTTP.sys din IIS (pt. a asigura o mai buna performanta):
 
