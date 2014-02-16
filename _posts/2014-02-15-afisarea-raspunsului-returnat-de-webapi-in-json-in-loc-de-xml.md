@@ -72,7 +72,7 @@ Partea buna este ca in Windows poti adauga propriile MIME Type-uri. Acest lucru 
 
 1. Copiaza textul de mai jos intr-un fisier de tip text cu extensia `.reg`
 
-	```batch
+	```
 	[HKEY_CLASSES_ROOT\MIME\Database\Content Type\application/json]
 	"CLSID"="{25336920-03F9-11cf-8FD0-00AA00686F13}"
 	"Encoding"=hex:08,00,00,00
