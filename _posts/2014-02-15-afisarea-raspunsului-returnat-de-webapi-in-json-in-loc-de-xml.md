@@ -121,7 +121,7 @@ Odata serializatorul de XML eliminat, server-ul nu mai are alternativa si va ras
 
 - este o varianta pe care personal nu o agreez. Exemplu de folosire (detalii [aici](http://stackoverflow.com/a/19978996) sau [aici](http://stackoverflow.com/a/11357371)):
 
- ```csharp
+ ```
  for xml : http://localhost:16600/api/values/?type=xml
  for json: http://localhost:16600/api/values?type=json
  ```

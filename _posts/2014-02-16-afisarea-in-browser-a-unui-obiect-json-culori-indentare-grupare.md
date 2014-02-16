@@ -10,7 +10,7 @@ categories: Infrastructure
 
 Atunci cand faci debug si lucrezi cu servicii REST simple (GET, fara autentificare) nu ai nevoie de tool-uri specializate (fiddler, postman etc). E suficient un browser, dar pt. o vizualizare optima a rezultatuilui ai nevoie de cateva ajustari:
 
-- in primul rand, mai mult ca sigur vei dori ca rezultatul sa fie afisat in format JSON (in loc de XML). Detalii despre acest lucru am scris in [articolul precedent](http://maran.ro/2014/02/16/afisarea-in-browser-a-unui-obiect-json-culori-indentare-grupare/).
+- in primul rand, mai mult ca sigur vei dori ca rezultatul sa fie afisat in format JSON (in loc de XML). Detalii despre acest lucru am scris in [articolul precedent](http://maran.ro/2014/02/15/afisarea-raspunsului-returnat-de-webapi-in-json-in-loc-de-xml/).
 - in al 2-lea rand, vei dori ca JSON-ul returnat sa fie afisat intr-o forma cat mai lizibila, iar descrierea acestui lucru reprezinta scopul prezentului articol.
 
 Am modificat controller-ul "Values" dintr-un proiect WebAPI default a.i. sa returneze doua obiecte ceva mai complexe. Rezultatul in cele 3 browser-e (Chrome, FF, IE) este urmatorul:
