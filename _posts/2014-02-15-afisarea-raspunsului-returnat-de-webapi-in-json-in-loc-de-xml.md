@@ -61,3 +61,13 @@ La toate aceste intrebari am sa incerc sa raspund mai jos.
 - in lista de "preferinte" trimise de IE nu figureaza nici JSON, nici XML, prin urmare server-ul raspunde cu formatarea default: adica JSON
 
 **Obs**: In cazul de fata, atributul **Content-Type** este este atributul prin care server-ul comunica clientului tipul datelor returnate. Acelasi atribut poate fi folosit si de catre client, in acelasi scop, atunci cand are date de transmis server-ului (POST). Alte detalii despre `Accept` si `Content-Type` am notat [aici](http://maran.ro/2013/11/10/github-pe-post-de-cdn-pentru-fisiere-statice-js/).
+
+## Solutia 0: Adauga in Windows registry un MIME Type corespunzator (doar pt. IE) ##
+
+Am notat-o ca fiind "solutia 0" fiindca, de fapt, IE primeste deja datele in format JSON. Deci aici nu avem o problema cu "comutarea" din XML in JSON ci mai degraba cu afisarea acestor date pe ecran.
+
+IE se bazeaza pe MIME Type-urile din Windows si cum Windows-ul nu contine implicit un MIME Type pt. JSON, IE-ul **nu** randeaza raspunsul primit ci lasa aceasta sarcina pe seama utilizatorului (propunandu-i un download).
+
+Partea buna este ca in Windows poti adauga propriile MIME Type-uri. Acest lucru se poate face adaugand doua chei in registry. O poti face manual dar cea mai simpla varianta este urmatoarea (detalii [aici](http://blogs.bullinnovations.com/how-to-enable-json-view-in-internet-explorer/)):
+
+1. Copiaza textul de mai jos intr-un fisier de tip text cu extensia `.reg`
