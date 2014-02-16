@@ -71,3 +71,15 @@ IE se bazeaza pe MIME Type-urile din Windows si cum Windows-ul nu contine implic
 Partea buna este ca in Windows poti adauga propriile MIME Type-uri. Acest lucru se poate face adaugand doua chei in registry. O poti face manual dar cea mai simpla varianta este urmatoarea (detalii [aici](http://blogs.bullinnovations.com/how-to-enable-json-view-in-internet-explorer/)):
 
 1. Copiaza textul de mai jos intr-un fisier de tip text cu extensia `.reg`
+
+	```batch
+	[HKEY_CLASSES_ROOT\MIME\Database\Content Type\application/json]
+	"CLSID"="{25336920-03F9-11cf-8FD0-00AA00686F13}"
+	"Encoding"=hex:08,00,00,00
+	
+	[HKEY_CLASSES_ROOT\MIME\Database\Content Type\text/json]
+	"CLSID"="{25336920-03F9-11cf-8FD0-00AA00686F13}"
+	"Encoding"=hex:08,00,00,00
+	```
+
+2. Executa (dublu-click) fisierul de mai sus.
