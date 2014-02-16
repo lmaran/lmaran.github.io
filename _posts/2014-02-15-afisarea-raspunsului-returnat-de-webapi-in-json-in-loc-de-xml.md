@@ -52,3 +52,12 @@ De aici se nasc cateva **intrebari**:
 - Cum poti face ca toate browserele sa-ti afiseze un JSON? Poti face asta chiar si fara sa "atingi" codul?
 
 La toate aceste intrebari am sa incerc sa raspund mai jos.
+
+## Identificarea cauzei ##
+
+**Implicit**, serviciul WebApi stie sa furnizeze raspunsul in ambele tipuri de formate (XML, JSON). La primirea unui request, acesta inspecteaza proprietatea **Accept** din header-ul HTTP (vezi valoarea de sub fiecare poza) si ii raspunde clientului (browser-ului) in functie de "preferinta" setata in acest atribut:
+
+- in cazul Chrome si FF, campul **Accept** contine valoarea `application/xml`, asadar, server-ul nu face decat sa se conformeze: returneaza un XML
+- in lista de "preferinte" trimise de IE nu figureaza nici JSON, nici XML, prin urmare server-ul raspunde cu formatarea default: adica JSON
+
+**Obs**: In cazul de fata, atributul **Content-Type** este este atributul prin care server-ul comunica clientului tipul datelor returnate. Acelasi atribut poate fi folosit si de catre client, in acelasi scop, atunci cand are date de transmis server-ului (POST). Alte detalii despre `Accept` si `Content-Type` am notat [aici](http://maran.ro/2013/11/10/github-pe-post-de-cdn-pentru-fisiere-statice-js/).
