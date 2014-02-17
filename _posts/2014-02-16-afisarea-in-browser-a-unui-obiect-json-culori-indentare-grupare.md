@@ -35,7 +35,7 @@ Ce **nu pot suporta** - in general tot ce tine de styling:
 Configurare codului (ma refer la Web API) se face adaugand in fisierul de configurare urmatoarele linii:
 
 ```csharp
-var jsonFormatter = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
+var jsonFormatter = config.Formatters.JsonFormatter;
 var settings = jsonFormatter.SerializerSettings;
 settings.Formatting = Newtonsoft.Json.Formatting.Indented; // Indenting
 settings.ContractResolver = new CamelCasePropertyNamesContractResolver(); // Camel Casing

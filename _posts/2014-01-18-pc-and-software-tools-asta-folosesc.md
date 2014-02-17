@@ -37,14 +37,17 @@ Imi propun sa tin actualizata lista de mai jos, asa ca o voi modifica de cate or
 	- [Web Essentials](http://vswebessentials.com/)
 	- [Visual Studio Spell Checker](http://visualstudiogallery.msdn.microsoft.com/a23de100-31a1-405c-b4b7-d6be40c3dfff) - detalii [aici](http://maran.ro/2013/11/23/visual-studio-doua-plugin-uri-utile/)
 	- [Vertical lines as indent guides](http://visualstudiogallery.msdn.microsoft.com/e792686d-542b-474a-8c55-630980e72c30) - detalii [aici](http://maran.ro/2013/11/23/visual-studio-doua-plugin-uri-utile/)
+- Chrome extensions:
+	- [Postman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm) - REST client
+	- [JSON View](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) - formateaza rezultatele de tip JSON (detalii [aici](http://maran.ro/2014/02/16/afisarea-in-browser-a-unui-obiect-json-culori-indentare-grupare/))
+	- [Change HTTP Request Header](https://chrome.google.com/webstore/detail/change-http-request-heade/ppmibgfeefcglejjlpeihfdimbkfbbnm) - forteaza browser-ul sa ceara JSON in loc de XML (detalii [aici](http://maran.ro/2014/02/15/afisarea-raspunsului-returnat-de-webapi-in-json-in-loc-de-xml/)) (**new**)
+	- [LastPass](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd) - password manager
 - [Node.js](http://nodejs.org/) (`cinst nodejs.install`)
 - [Sublime Text](http://www.sublimetext.com/) (`cinst sublimetext2` sau `cinst sublimetext3` [beta])
 - [Github for Windows](http://windows.github.com/) (`cinst githubforwindows`) - software repositories + blog personal
 - [TortoiseHg](http://tortoisehg.bitbucket.org/) (`cinst tortoisehg`) - interfatata grafica, bazata pe Mercurial. pt. versionarea proiectelor software
 - [VisualHg](http://visualhg.codeplex.com/) (`cinst VisualHG`) - extinde TortoiseHg la nivel de Visual Studio
 - [cURL](http://curl.haxx.se/) (`cinst curl`) - REST client (command-line)
-- [Postman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm) - REST client (extensie Chrome)
-- [JSON View](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) - formateaza rezultatele de tip JSON (extensie Chrome)
 - [Azure Storge Explorer](http://azurestorageexplorer.codeplex.com/) (`cinst AzureStorageExplorer`) - GUI editor pt. *tables*, *blobs*, *queues* (by Neudesic)
 - [Apache Benchmark (ab.exe)](http://www.apachehaus.com/cgi-bin/download.plx?dli=UtWNNp1UNBTT6h2Kl5GbFBlVOpkVFVFdUFDZGl1Z) - cel mai cunoscut benchmark pt. aplicatii web
 - [Fiddler](http://fiddler2.com/) (`cinst fiddler4`) - analizor de trafic HTTP, REST client 
