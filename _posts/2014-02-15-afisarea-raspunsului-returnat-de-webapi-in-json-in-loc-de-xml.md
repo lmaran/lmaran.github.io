@@ -146,10 +146,12 @@ Daca nu pot sau nu doresc sa modific codul aplicatiei, atunci varianta care imi 
 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/change-http-request-header.png)
 
-- optiunea **User-Agent** este definita by default. Vom adauga optiunea **Agent** si ii vom atribui aceeasi valoare ca si in cazul IE:
+- optiunea **User-Agent** este definita by default. Vom adauga optiunea **Accept**:
 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/change-http-request-header-add-accept.png)
 
+- adauga in campul "Presets" valoarea: `text/html, application/xhtml+xml, */*` (aceeasi valoare ca si in cazul IE)
+ 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/change-http-request-header-add-accept-value.png)
 
 - in ultimul pas, apeleaza din nou aceasta extensie iar pentru atributul Agent selecteaza din lista valoarea adaugata in pasul precedent:
