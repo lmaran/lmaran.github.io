@@ -7,7 +7,7 @@ categories: jekyll
 ---
 
 
-Asigura-te ca ai deja instalat **Ruby**, **RubyGems** si **RubyDevKit**. Pentru detalii poti consulta precedentul articol.
+Asigura-te ca ai deja instalat **Ruby**, **RubyGems** si **RubyDevKit**. Pentru detalii poti consulta [precedentul articol](http://maran.ro/2013/12/31/instalare-ruby-rubygems-si-rubydevkit-pe-windows-81-64bit/).
 
 ## Instalare
 
