@@ -37,6 +37,7 @@ Imi propun sa tin actualizata lista de mai jos, asa ca o voi modifica de cate or
 	- [Web Essentials](http://vswebessentials.com/)
 	- [Visual Studio Spell Checker](http://visualstudiogallery.msdn.microsoft.com/a23de100-31a1-405c-b4b7-d6be40c3dfff) - detalii [aici](http://maran.ro/2013/11/23/visual-studio-doua-plugin-uri-utile/)
 	- [Vertical lines as indent guides](http://visualstudiogallery.msdn.microsoft.com/e792686d-542b-474a-8c55-630980e72c30) - detalii [aici](http://maran.ro/2013/11/23/visual-studio-doua-plugin-uri-utile/)
+	- [Ref12](http://visualstudiogallery.msdn.microsoft.com/f89b27c5-7d7b-4059-adde-7ccc709fa86e) - "Go To Definitions" in codul de .NET framework
 - Chrome extensions:
 	- [Postman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm) - REST client
 	- [JSON View](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) - formateaza rezultatele de tip JSON (detalii [aici](http://maran.ro/2014/02/16/afisarea-in-browser-a-unui-obiect-json-culori-indentare-grupare/))
