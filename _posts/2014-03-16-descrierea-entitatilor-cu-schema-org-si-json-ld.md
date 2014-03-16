@@ -56,7 +56,7 @@ Mai multe detalii despre acest exemplu se regasesc [aici](http://schema.org/docs
 
 OK, acum stim cum putem obtine beneficii maxime (SEO) de la motoarele de cautare: stim ca pe langa datele utile, mai avem nevoie de niste descrieri ale respectivelor date (asa numitele `metadata`). Si cum majoritatea aplicatiilor moderne ambaleaza si transmit datele de la server catre client in format JSON, solutia naturala este ca si metadatele sa fie transportate cu acelasi "vehicul".
 
-[JSON-LD](http://www.w3.org/TR/json-ld-syntax/) (Linked Data) este un standard care [se foloseste](http://blog.schema.org/2013/06/schemaorg-and-json-ld.html) de vocabularul definit la schema.org pentru a descrie diverse entitati (data + metadata) in format JSON.
+[JSON-LD](http://json-ld.org/) (Linked Data) este un standard care [se foloseste](http://blog.schema.org/2013/06/schemaorg-and-json-ld.html) de vocabularul definit la schema.org pentru a descrie diverse entitati (data + metadata) in format JSON.
 
 Practic, JSON-LD este de fapt un JSON standard, cu cateva restrictii:
 
