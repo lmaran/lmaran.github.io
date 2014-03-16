@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Descrierea entitatilor cu Schema.org si JSON-LD"
+title:  "SEO improvement prin descrierea entitatilor cu Schema.org si JSON-LD"
 date:   2014-03-16 00:00:01
 comments: true
 categories: software infrastructure
