@@ -54,7 +54,9 @@ Mai multe detalii despre acest exemplu se regasesc [aici](http://schema.org/docs
 
 ## JSON-LD ##
 
-[JSON-LD](http://www.w3.org/TR/json-ld-syntax/) (Linked Data) este un standard care [se foloseste](http://blog.schema.org/2013/06/schemaorg-and-json-ld.html) de vocabularul definit la schema.org pentru a descrie diverse entitati in format JSON.
+OK, acum stim cum putem obtine beneficii maxime (SEO) de la motoarele de cautare: stim ca pe langa datele utile, mai avem nevoie de niste descrieri ale respectivelor date (asa numitele `metadata`). Si cum majoritatea aplicatiilor moderne ambaleaza si transmit datele de la server catre client in format JSON, solutia naturala este ca si metadatele sa fie transportate cu acelasi "vehicul".
+
+[JSON-LD](http://www.w3.org/TR/json-ld-syntax/) (Linked Data) este un standard care [se foloseste](http://blog.schema.org/2013/06/schemaorg-and-json-ld.html) de vocabularul definit la schema.org pentru a descrie diverse entitati (data + metadata) in format JSON.
 
 Practic, JSON-LD este de fapt un JSON standard, cu cateva restrictii:
 
@@ -77,7 +79,7 @@ Descrierea HTML de mai sus, transpusa in format JSON-LD, devine:
 }
 ````
 
-## JSON IntelliSese bazat pe JSON-LD ##
+## JSON IntelliSese bazat pe JSON-LD si Schema.org##
 
 Mad Kristensen (autorul lui Web Essentials) prezinta in acest [video](http://www.youtube.com/watch?v=dwURmZ71sj8) suportul IntelliSense in JSON pentru entitatile descrise in schema.org
 
