@@ -88,7 +88,7 @@ Daca ai ales un **host** de tip IIS, poti opta in continuare pt. unul din cele 2
 - dezinstalezi, din Nuget, pachetul: `Microsoft.Owin.Host.IIS`. Nimic mai mult. Odata cu el se va dezinstala si `Microsoft.AspNet.Loader.IIS` asa ca, daca inainte ai avut  instalat System.Web, el va fi cel care va prelua in continuare controlul.
 
 
-### Masurarea performantelor: Helios vs. System.Web ###
+## 3. Masurarea performantelor: Helios vs. System.Web ##
 
 Pt. masurarea performantelor am creat creat o aplicatie simpla de tip Owin plecand de la un "Empty" Asp.Net project. Tot codul se afla in fisierul Startup.cs:
 
@@ -131,7 +131,7 @@ Doar de curiozitate, am adaugat pentru masuratori si codul de tip "Hello World" 
 
 Nu incercati sa-l intelegeti :-), am sa-l iau pe rand:
 
-### Consum de CPU ###
+### 3.1. Consum de CPU ###
 
 ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/perfmon-cpu-ab.png)
 
@@ -139,7 +139,7 @@ Aici Helios si NodeJs se comporta ambele la fel de bine: se descurca doar cu jum
 
 Am sa anticipez putin: din figura de mai sus se observa ca "turnul" cel mai ingust corespunde lui Helios. Adica, acelasi test s-a finalizat mai rapid in cazul Helios, deci ne vom astepta ca la testul "requests/sec" acesta sa ofere cel mai bun rezultat.
 
-### Rata de transfer (req/sec) ###
+### 3.2. Rata de transfer (req/sec) ###
 
 ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/perfmon-req-ab.png)
 
@@ -149,7 +149,7 @@ Am sa anticipez putin: din figura de mai sus se observa ca "turnul" cel mai ingu
 
 Faptul ca aria incadrata de cele 3 "clopote" este cvasi-identica imi ofera un argument in plus in ceea ce priveste acuratetea rezultatelor (in fiecare test nr. de request-uri a fost acelasi - 70.000).
 
-### Memoria alocata (doar "manage" memory) ###
+### 3.3. Memoria alocata (doar "manage" memory) ###
 
 ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/perfmon-bytes-ab.png)
 
@@ -157,7 +157,7 @@ Se observa ca Helios consuma de aprox 4 ori mai putina memorie, dar sa nu ne ama
 
 Pe masura ce creste in complexitare, aplicatia va tinde sa devina conumatorul de memorie dominant, reducand astfel decalajul afisat mai sus. 
 
-### Numarul de biblioteci (dll-uri) incarcate in memorie ###
+### 3.4. Numarul de biblioteci (dll-uri) incarcate in memorie ###
 
 ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/perfmon-asm-ab.png)
 
@@ -167,7 +167,7 @@ Acelasi rezultat il poti obtine apeland din cod (sau in *Immediate Window*) meto
 
 Cu Helios, numarul de dll-uri necesare rularii aplicatiei se reduce la jumatate (20 fata de 39). Ramane insa valabila aceeasi afirmatie ca si la paragraful anterior: pe masura ce aplicatia va creste in complexitate, nr. de dll-uri ce apartin strict de aplicatie va creste, facand ca raportul dintre cele doua servere sa se diminueze treptat.
 
-## Helios si System.Web convietuiesc impreuna ##
+## Helios si System.Web, impreuna ##
 
 Punand un *break point* pe ultima linie din `Startup.cs` si urmarind apelurile de pe stiva te poti convinge ca in pipeline-ul Http nu mai apare nicio referinta la System.Web. Cele 2 biblioteci instalate (Loader.IIS si Host.IIS) fac aproape toata treaba:
 
