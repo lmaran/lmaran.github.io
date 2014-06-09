@@ -19,7 +19,7 @@ Pentru a gazdui o aplicatie web (WebApi) pe o masina Windows ai practic doua opt
 1. IIS
 2. SelfHost/OwinHost (o Console Application ce poate rula independent sau ca Windows Service)
 
-Exista cateva scenarii in care SelfHost poate fi o solutie viabila (sau unica solutie). Pentru majoritatea scenariilor insca, IIS este "gazda" ideala. 
+Exista cateva scenarii in care SelfHost poate fi o solutie viabila (sau unica solutie). Pentru majoritatea scenariilor insa, IIS este "gazda" ideala. 
 De ce prefer IIS?
 
 - Deploy simplu:
