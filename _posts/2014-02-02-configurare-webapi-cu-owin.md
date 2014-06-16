@@ -17,16 +17,20 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/add-empty-project.png)
 
-2. `Install-Package Microsoft.AspNet.WebApi.Owin`. Astfel se instaleaza automat dependentele:
-	- Microsoft.AspNet.WebApi.Core
-	- Microsoft.Owin
-	- Owin
 
-3. `Install-Package Microsoft.Owin.Host.SystemWeb` - pt. WebApi hostat in IIS (cu ASP.NET pipeline)
-	
- OBS: daca vrei o hostare de tip "self host" (fara "IIS" si ASP.NET) atunci in loc de pachetul de mai sus se instaleaza `Microsoft.Owin.Host.HttpListener`
+2. Instaleaza unul din cele 3 **host**-uri care va gazdui aplicatia:
 
-4. dll-urile referentiate pana acum (legate de OWIN) ar fi urmatoarele:
+- `Install-Package Microsoft.Owin.Host.SystemWeb` - (cu IIS si ASP.NET)
+- `Install-Package Microsoft.Owin.Host.HttpListener` - "SelfHost" (fara "IIS" si fara ASP.NET)
+- `Install-Package Microsoft.Owin.Host.IIS -pre` - "Helios" (cu "IIS" dar fara ASP.NET) 
+
+3. Recomandat, updateaza toate pachetele instalate. Cel putin pt. varianta actuala de "Helio" acest pas este obligatoriu:
+
+- `Update-Package -pre`
+
+Recomand varianta Helios. Detalii [aici](http://maran.ro/2014/06/06/helios-versus-systemweb/).
+
+4. dll-urile referentiate pana acum (legate de OWIN cu System.Web) ar fi urmatoarele:
  
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/owin-references.png)
 
@@ -35,7 +39,7 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
 	```csharp
 	using Owin;
 	
-	namespace InstallWebApiOwinIIS
+	namespace Web
 	{
 	    public class Startup
 	    {
@@ -67,11 +71,13 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
  
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/test-owin-only-ok.png)
 
- OBS: Desigur ca pt. testul de mai sus sunt necesare doar pachetele OWIN (nu si cele WebApi). Am preferat insa instalarea celor doua pachete (amintite la pasii 2 si 3 ) pt. a reduce nr. de operatii necesare in pasii ce urmeaza.
-
 ## "Hello world" - OWIN si WebApi ##
 
-1. Acum, ca host-ul de tip OWIN am vazut ca functioneaza, urmeaza sa "prelungesc" pipeline-ul a.i. cererea sa fie servita de un controller WebApi. Modific fisierul `Startup.cs` astfel:
+1. Acum, ca host-ul de tip OWIN am vazut ca functioneaza, urmeaza sa "prelungesc" pipeline-ul a.i. cererea sa fie servita de un controller WebApi. 
+
+`Install-Package Microsoft.AspNet.WebApi.Owin -pre`.
+ 
+2. Modific fisierul `Startup.cs` astfel:
 	
 	```csharp
     public class Startup
@@ -85,7 +91,7 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
         }
     }
 	```
-2. unde `WebApiConfig` este un fisier in care am izolat setarile WebApi, astfel:
+unde `WebApiConfig` este un fisier in care am izolat setarile WebApi, astfel:
 
 	```csharp
     public static class WebApiConfig
@@ -103,7 +109,7 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
         }
     }
 	```
-9. apoi, am creat folder-ul Controllers in care am adaugat un controller simplu, ca mai jos:
+3. Apoi, am creat folder-ul Controllers in care am adaugat un controller simplu, ca mai jos:
 
 	```csharp
     public class HomeController : ApiController
@@ -114,11 +120,11 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
         }
     }
 	```
-10. In acest moment structura proiectului este urmatoarea:
+4. In acest moment structura proiectului este urmatoarea:
 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/webapi-owin-files-config1.png)
 
-11. iar la rularea aplicatiei ar trebui sa primim mesajul "hello world", returnat de controller:
+5. iar la rularea aplicatiei ar trebui sa primim mesajul "hello world", returnat de controller:
 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/webapi-response-ok1.png)
 
