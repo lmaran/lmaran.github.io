@@ -30,11 +30,11 @@ Actualizeaza pachetele instalate. Cel putin pt. varianta actuala de "Helio" aces
 
 Recomand varianta Helios. Detalii [aici](http://maran.ro/2014/06/06/helios-versus-systemweb/).
 
-3. dll-urile referentiate pana acum (legate de OWIN cu System.Web) ar fi urmatoarele:
+Dll-urile referentiate pana acum (legate de OWIN cu System.Web) ar fi urmatoarele:
  
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/owin-references.png)
 
-4. creaza in radacina proiectului un fisier numit `Startup.cs` cu urmatorul continut:
+3. Creaza in radacina proiectului un fisier numit `Startup.cs` cu urmatorul continut:
 
 	```csharp
 	using Owin;
@@ -67,7 +67,7 @@ Recomand varianta Helios. Detalii [aici](http://maran.ro/2014/06/06/helios-versu
 	...
 	```
 
-5. test OWIN (fara WebApi):
+4. test OWIN (fara WebApi):
  
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/test-owin-only-ok.png)
 
