@@ -24,17 +24,17 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
 - `Install-Package Microsoft.Owin.Host.HttpListener` - "SelfHost" (fara "IIS" si fara ASP.NET)
 - `Install-Package Microsoft.Owin.Host.IIS -pre` - "Helios" (cu "IIS" dar fara ASP.NET) 
 
-3. Recomandat, updateaza toate pachetele instalate. Cel putin pt. varianta actuala de "Helio" acest pas este obligatoriu:
+Recomandat, updateaza toate pachetele instalate. Cel putin pt. varianta actuala de "Helio" acest pas este obligatoriu:
 
 - `Update-Package -pre`
 
 Recomand varianta Helios. Detalii [aici](http://maran.ro/2014/06/06/helios-versus-systemweb/).
 
-4. dll-urile referentiate pana acum (legate de OWIN cu System.Web) ar fi urmatoarele:
+3. dll-urile referentiate pana acum (legate de OWIN cu System.Web) ar fi urmatoarele:
  
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/owin-references.png)
 
-5. creaza in radacina proiectului un fisier numit `Startup.cs` cu urmatorul continut:
+4. creaza in radacina proiectului un fisier numit `Startup.cs` cu urmatorul continut:
 
 	```csharp
 	using Owin;
@@ -67,7 +67,7 @@ Recomand varianta Helios. Detalii [aici](http://maran.ro/2014/06/06/helios-versu
 	...
 	```
 
-6. test OWIN (fara WebApi):
+5. test OWIN (fara WebApi):
  
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/test-owin-only-ok.png)
 
