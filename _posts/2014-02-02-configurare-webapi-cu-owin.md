@@ -24,7 +24,7 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
 - `Install-Package Microsoft.Owin.Host.HttpListener` - "SelfHost" (fara "IIS" si fara ASP.NET)
 - `Install-Package Microsoft.Owin.Host.IIS -pre` - "Helios" (cu "IIS" dar fara ASP.NET) 
 
-Recomandat, updateaza toate pachetele instalate. Cel putin pt. varianta actuala de "Helio" acest pas este obligatoriu:
+Actualizeaza pachetele instalate. Cel putin pt. varianta actuala de "Helio" acest pas este obligatoriu:
 
 - `Update-Package -pre`
 
