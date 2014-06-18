@@ -13,7 +13,7 @@ Codul de mai jos e disponibil si pe [github](https://github.com/lmaran/DemoOwin/
 
 ## "Hello world" - doar cu OWIN ##
 
-1. adauga proiect WebApi gol
+1. adauga un proiect gol
 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/add-empty-project.png)
 
