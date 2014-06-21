@@ -82,6 +82,10 @@ Dupa instalare, singurul port disponibil va fi cel de RDP (3389). Adauga inca do
 - Deshide portul 8080 in Firewall:
 	![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2012/FirewallOpenWebDeploy.png)
 
+sau:
+
+    netsh advfirewall firewall add rule name="My WebDeploy" dir=in action=allow protocol=TCP localport=8080
+
 - **Obs2**: vom folosi WebDeploy atat pt. a receptiona publicarile facute din VS2012 cat si ulterior, pt. sincronizarea continutului folder-ului wwwroot intre VM1 si VM2.
 
 In[ partea a IV-a](http://lucian.maran.ro/2012/11/25/configurarea-unui-web-farm-in-windows-azure-partea-iv-instalarea-unei-masini-virtuale-secundare/) urmeaza sa prezint diferentele care apar la configurarea unei masini virtuale secundare.
