@@ -34,7 +34,7 @@ Practic, utilitarul ofera 4 functionalitati de baza:
 	
  `psping -n 10 -w 4 speedtest-ams1.digitalocean.com:80`
  - 10 ping-uri (+4 de warmup)
- - OBS: adaugi doar port-ul
+ - adaugi doar port-ul
  - cda de mai jos e lansata de pe o AzureVM hostata in Amsterdam (ca si Digital Ocean). De acasa, aceeasi comada -> 45ms
 	
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/psping1.png)
@@ -44,7 +44,7 @@ Practic, utilitarul ofera 4 functionalitati de baza:
  `psping -l 8k -n 100 -w 4 speedtest-ams1.digitalocean.com:80`
  - request size = 8192 bytes
  - 100 request-uri (+4 de warmup)
- - OBS: daca pui un numar prea mare de request-uri (n) e posibil sa ti se inchida conexiunea inainte de finalizarea testului
+ - daca pui un numar prea mare de request-uri (n) e posibil sa ti se inchida conexiunea inainte de finalizarea testului
  - cda de mai jos e lansata de pe o AzureVM hostata in Amsterdam (ca si Digital Ocean). De acasa, aceeasi comada -> 45ms (la fel ca in cazul 2)
  - daca la testul din fig. de mai jos (lansat din Azure) scad dimensiune pachetului de la 8k la 500 bytes -> obtin ac. rez. ca in cazul 2 (1.6ms)
 
@@ -57,7 +57,7 @@ Practic, utilitarul ofera 4 functionalitati de baza:
  - 1000 request-uri (+4 de warmup)
  - cda de mai jos e lansata de pe o AzureVM hostata in Amsterdam (ca si Digital Ocean). 
   - de acasa, aceeasi comada ->1.2MB/s
-  - de acasa, ac. cda dar inspre Azure -> 1.3MB/s
+  - de acasa, aceeasi c-da dar inspre Azure -> 1.3MB/s
  Explicatia pt. latimea de banda asa de mica ar fi ca ambii provideri (DO si Microsoft) limiteaza traficul.
 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/psping3.png)
