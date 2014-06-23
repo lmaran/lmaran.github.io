@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Windows Azure - ce DataCenter sa alegi?"
-date:   2014-06-15 00:00:01
+date:   2014-06-21 00:00:01
 comments: true
 categories: software infrastructure
 ---
