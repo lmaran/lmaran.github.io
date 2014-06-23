@@ -43,9 +43,9 @@ Aceasta solutie presupune sa rulezi comanda `curl` intr-un 'shell' Unix. Sigur, 
 
 O varianta ar fi sa instalezi [Cygwin](https://www.cygwin.com/) (`cinst cygwin`). Dezavantajul ar fi ca acest pachet poate fi mult prea mare (100MB) fata de ce ai nevoie.
 
-O alta varianta (asta folosesc eu) ar fi sa te bazezi pe shell-ul `Git bash` pe care il ai deja instalat daca folosesti [Git for Windows](https://windows.github.com/).
+O alta varianta (asta folosesc eu) ar fi sa te bazezi pe shell-ul `Git bash` pe care il ai deja instalat daca folosesti [Git for Windows](https://windows.github.com/). La mine l-am gasit in 
 
-La mine l-am gasit in `C:\Users\Lucian\AppData\Local\GitHub\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef`.
+`C:\Users\Lucian\AppData\Local\GitHub\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef`.
 
 Il poti rula in doua moduri:
 
@@ -61,6 +61,4 @@ La final, adauga calea spre `git-bash.bat` sau `bash.exe` in variabila PATH.
 
 ## Concluzie ##
 
-Multi producatori isi documenteaza REST API-urile folosind varianta cURL cu sintaxa Linux (ex: [Elasticsearch](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/docs-index_.html)). Inlocuid ghilimelele si apostroafele, aceste comnzi pot rula si pe varianta cURL de Windows.
-
-Instaland un shell din categoria `cygwin` sau `git-bash` poti rula aceste comenzi fara nicio modificare (doar cu `copy/paste`).
+Multi producatori isi documenteaza REST API-urile folosind varianta cURL cu sintaxa Linux (ex: [Elasticsearch](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/docs-index_.html)). Inlocuid ghilimelele si apostroafele, aceste comnzi pot rula si pe varianta cURL de Windows. Daca vrei insa sa rulezi aceste comenzi fara nicio modificare (doar cu `copy/paste`), foloseste un shell de tipul `cygwin` sau `git-bash`.
