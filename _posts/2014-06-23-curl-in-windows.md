@@ -43,9 +43,7 @@ Aceasta solutie presupune sa rulezi comanda `curl` intr-un 'shell' Unix. Sigur, 
 
 O varianta ar fi sa instalezi [Cygwin](https://www.cygwin.com/) (`cinst cygwin`). Dezavantajul ar fi ca acest pachet poate fi mult prea mare (100MB) fata de ce ai nevoie.
 
-O alta varianta (asta folosesc eu) ar fi sa te bazezi pe shell-ul `Git bash` pe care il ai deja instalat daca folosesti [Git for Windows](https://windows.github.com/). La mine l-am gasit in 
-
-`C:\Users\Lucian\AppData\Local\GitHub\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef`.
+O alta varianta (asta folosesc eu) ar fi sa te bazezi pe shell-ul `Git bash` pe care il ai deja instalat daca folosesti [Git for Windows](https://windows.github.com/). La mine l-am gasit in: `C:\Users\Lucian\AppData\Local\GitHub\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef`.
 
 Il poti rula in doua moduri:
 
