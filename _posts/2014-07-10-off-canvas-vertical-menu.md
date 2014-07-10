@@ -17,7 +17,8 @@ Based on an idea stolen from [StartBootstrap](http://startbootstrap.com/simple-s
 All original features were preserved:
 
  - off canvas, full height, vertical menu
- - responsive design 
+ - responsive design
+ - IE9+
 
 ...and also added:
 
