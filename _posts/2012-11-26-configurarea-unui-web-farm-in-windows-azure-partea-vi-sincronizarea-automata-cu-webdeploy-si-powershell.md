@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Configurarea unui Web Farm in Windows Azure (partea VI - Sincronizarea automata cu WebDeploy si PowerShell)"
-date:   2012-11-25 00:00:06
+date:   2012-11-26 00:00:06
 comments: true
 categories: Dev-infrastructure Azure
 ---

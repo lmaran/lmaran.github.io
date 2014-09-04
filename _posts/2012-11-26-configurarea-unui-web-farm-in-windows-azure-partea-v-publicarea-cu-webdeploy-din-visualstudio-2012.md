@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Configurarea unui Web Farm in Windows Azure (partea V - Publicarea cu WebDeploy din VisualStudio 2012)"
-date:   2012-11-25 00:00:05
+date:   2012-11-26 00:00:05
 comments: true
 categories: Dev-infrastructure Azure
 ---
