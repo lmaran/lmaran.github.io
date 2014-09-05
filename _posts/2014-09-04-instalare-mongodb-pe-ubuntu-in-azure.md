@@ -93,8 +93,6 @@ Am sa prezint in continuare o "compilatie" personala inspirata din mai multe  su
 
         sudo fdisk /dev/sdc 
 
- Obs:
-
  - type "n" -> creaza o noua partitie
  - type "p" --> primary partition
  - enter --> partition 1
