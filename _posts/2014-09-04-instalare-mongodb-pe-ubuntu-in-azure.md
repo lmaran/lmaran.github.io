@@ -81,30 +81,26 @@ Detalii [aici](http://azure.microsoft.com/en-us/documentation/articles/virtual-m
 
 Am sa prezint in continuare o "compilatie" personala inspirata din mai multe  surse: [doc1](http://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-tutorial/), [doc2](https://help.ubuntu.com/community/InstallingANewHardDrive), [doc3](http://docs.mongodb.org/ecosystem/tutorial/install-mongodb-on-linux-in-azure/).
 
-
-
 - Verifica lista cu disk-urile instalate (ca sa stii ce disk sa partitionezi). 
 
- ```
-sudo lshw -C disk
- ```
+        sudo lshw -C disk
 
  In Azure, primul disk atasat va fi, de regula, al 3-lea disk (ex: \dev\sdc):
 
 
-
 - Partitioneaza disk-ul identificat anterior (voi pp. in continuare ca noul disk = \dev\sdc)
 
- ```
-sudo fdisk /dev/sdc 
- ```
 
-	- type "n" -> creaza o noua partitie
-	- type "p" --> primary partition
-	- enter --> partition 1
-	- enter --> first sector (default)
-	- enter --> last sector (default) - cream o sg. partitie pt. tot disk-ul
-	- type "w" --> salveaza modificarile pe disk (si exit)
+        sudo fdisk /dev/sdc 
+
+ Obs:
+
+ - type "n" -> creaza o noua partitie
+ - type "p" --> primary partition
+ - enter --> partition 1
+ - enter --> first sector (default)
+ - enter --> last sector (default) - cream o sg. partitie pt. tot disk-ul
+ - type "w" --> salveaza modificarile pe disk (si exit)
 
 
 - Optional. Partitia mai sus creata va fi `/dev/sdc1`. (Are un "1" in plus fata de disk). Poti verifica numele acestei partitii cu:
