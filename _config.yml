@@ -1,6 +1,6 @@
 url: http://maran.ro
 name: Lucian Maran
-markdown: kramdown
+markdown: redcarpet
 pygments: false
 permalink: /:year/:month/:day/:title/
 
