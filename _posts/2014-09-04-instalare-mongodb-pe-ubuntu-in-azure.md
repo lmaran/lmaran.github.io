@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Instalare MongoDB pe Ubuntu, in Microsoft Azure"
+title:  "Instalare MongoDB pe Ubuntu in Microsoft Azure"
 date:   2014-09-04 00:00:01
 comments: true
 categories: MongoDB, Ubuntu, Azure
