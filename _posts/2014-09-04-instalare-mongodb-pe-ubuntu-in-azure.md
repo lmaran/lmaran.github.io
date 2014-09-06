@@ -83,11 +83,11 @@ Am sa prezint in continuare o "compilatie" personala inspirata din mai multe  su
 
 - Verifica lista cu disk-urile instalate (ca sa stii ce disk sa partitionezi).
 
-    ```
+ ```
 sudo lshw -C disk
-    ```
+ ```
 
-    In Azure, primul disk atasat va fi, de regula, al 3-lea disk (ex: \dev\sdc):
+ In Azure, primul disk atasat va fi, de regula, al 3-lea disk (ex: \dev\sdc):
 
 - Partitioneaza disk-ul identificat anterior (voi pp. in continuare ca noul disk = \dev\sdc)
 
@@ -109,7 +109,7 @@ sudo fdisk /dev/sdc
  sudo fdisk /dev/sdc
  ```
 
-	- type "p" (de la print)
+ - type "p" (de la print)
 
 
 - Formateaza partitia /dev/sdc1 cu formatul "ext4":
