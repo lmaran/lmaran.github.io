@@ -39,7 +39,7 @@ Din VS2010 am creat o 'Console Application'. Codul este simplist: 2 clase POCO c
 7. ...si codul (totul este intr-un singur fisier):
 
 
-```
+``` csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
