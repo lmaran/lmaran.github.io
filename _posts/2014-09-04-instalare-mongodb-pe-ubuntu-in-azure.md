@@ -81,29 +81,30 @@ Detalii [aici](http://azure.microsoft.com/en-us/documentation/articles/virtual-m
 
 Am sa prezint in continuare o "compilatie" personala inspirata din mai multe  surse: [doc1](http://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-tutorial/), [doc2](https://help.ubuntu.com/community/InstallingANewHardDrive), [doc3](http://docs.mongodb.org/ecosystem/tutorial/install-mongodb-on-linux-in-azure/).
 
-- Verifica lista cu disk-urile instalate (ca sa stii ce disk sa partitionezi).
+ **1. Verifica lista cu disk-urile instalate** (ca sa stii ce disk sa partitionezi).
+
 
  ```
 sudo lshw -C disk
  ```
-
  In Azure, primul disk atasat va fi, de regula, al 3-lea disk (ex: \dev\sdc):
 
-- Partitioneaza disk-ul identificat anterior (voi pp. in continuare ca noul disk = \dev\sdc)
+**2. Partitioneaza disk-ul identificat anterior** (voi pp. in continuare ca noul disk = \dev\sdc)
+
 
  ```
-sudo fdisk /dev/sdc  
+sudo fdisk /dev/sdc
  ```  
  
- - type "n" -> creaza o noua partitie
- - type "p" --> primary partition
- - enter --> partition 1
- - enter --> first sector (default)
- - enter --> last sector (default) - cream o sg. partitie pt. tot disk-ul
- - type "w" --> salveaza modificarile pe disk (si exit)
+  - type "n" -> creaza o noua partitie
+  - type "p" --> primary partition
+  - enter --> partition 1
+  - enter --> first sector (default)
+  - enter --> last sector (default) - cream o sg. partitie pt. tot disk-ul
+  - type "w" --> salveaza modificarile pe disk (si exit)
 
-
-- Optional. Partitia mai sus creata va fi `/dev/sdc1`. (Are un "1" in plus fata de disk). Poti verifica numele acestei partitii cu:
+  
+**3. Optional. Verifica anumele partitiei.** Partitia mai sus creata va fi `/dev/sdc1`. (Are un "1" in plus fata de disk).
 
  ```
  sudo fdisk /dev/sdc
@@ -112,25 +113,25 @@ sudo fdisk /dev/sdc
  - type "p" (de la print)
 
 
-- Formateaza partitia /dev/sdc1 cu formatul "ext4":
+**4. Formateaza partitia** /dev/sdc1 cu formatul "ext4":
 
  ```
 sudo mkfs -t ext4 /dev/sdc1
  ```
 
-- Verifica partitia nou creata si copiaza-i UUID-ul (vei avea nevoie de el ulterior):
+**5. Verifica partitia nou creata** si copiaza-i UUID-ul (vei avea nevoie de el ulterior):
 
  ```
 sudo -i blkid
  ```
 
-- Creaza folder-ul la care urmeaza sa montezi noul drive. [Aici](https://help.ubuntu.com/community/InstallingANewHardDrive) se recomanda ca acest folder sa se numeasca `/media`:
+**6. Creaza folder-ul la care urmeaza sa montezi noul drive.** [Aici](https://help.ubuntu.com/community/InstallingANewHardDrive) se recomanda ca acest folder sa se numeasca `/media`:
 
  ```
 sudo mkdir /media/mongodrive
  ```
 
-- Monteaza partitia `/dev/sdc1` la folder-ul anterior creat:
+**7. Monteaza partitia** `/dev/sdc1` la folder-ul anterior creat:
 
  ```
 sudo mount /dev/sdc1 /media/mongodrive
@@ -138,32 +139,32 @@ sudo mount /dev/sdc1 /media/mongodrive
 
  - `sudo umount /media/mongodrive` - daca trebuie sa faci unmount
 
-
-- Optional. Verifica drive-ul nou montat:
+**8. Optional. Verifica drive-ul nou montat:**
 
  ```
 sudo df -h
  ```
 
-- Configureaza ca remontarea disk-ului sa se faca automat dupa reboot. Acest lucru se face prin editarea fisierului `/etc/fstab`. **Atentie!** - daca editezi ceva incorect sistemul nu mai booteaza. Deschide fisierul cu editorul "nano":
+**9. Configureaza ca remontarea disk-ului sa se faca automat dupa reboot.** Acest lucru se face prin editarea fisierului `/etc/fstab`. **Atentie!** - daca editezi ceva incorect sistemul nu mai booteaza. Deschide fisierul cu editorul "nano":
 
  ```
 sudo nano -w /etc/fstab
  ```
 
-- Adauga la sfarsitul fisierului linia:
+Adauga la sfarsitul fisierului linia:
 
  ```
 UUID=5e1ccfd5-e58a-456f-a78d-84bb5cb09fea   /media/mongodrive   ext4   defaults   0   2
  ```
 
- - unde valoare lui UUID se obtine cu comanda `sudo -i blkid` (prezentata anterior)
-	 - ctrl+o (save)
-	 - enter (overwrite)
-	 - ctrl+x (exit)
+unde valoare lui UUID se obtine cu comanda `sudo -i blkid` (prezentata anterior)
+
+ - ctrl+o (save)
+ - enter (overwrite)
+ - ctrl+x (exit)
 
 
-- Optional. Restarteaza sistemul (`sudo reboot`) si asigura-te ca disk-ul s-a montat automat (`sudo df -h`)
+**10. Optional. Restarteaza sistemul** (`sudo reboot`) si asigura-te ca disk-ul s-a montat automat (`sudo df -h`)
 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/09-04-ubuntu3.png)
 
@@ -171,34 +172,35 @@ UUID=5e1ccfd5-e58a-456f-a78d-84bb5cb09fea   /media/mongodrive   ext4   defaults 
 
 Doar datele si log-ul. Detalii [aici](http://askubuntu.com/a/257724).
 
-- Editeaza fisierul `/etc/mongodb.conf`:
+**1. Editeaza fisierul `/etc/mongodb.conf`**:
 
  ```
 sudo nano -w /etc/mongod.conf
  ```
 
- - Editeaza urmatorii parametri:
-	- `dbpath=/media/mongodrive/data`
-	- `logpath=/media/mongodrive/mongod.log`
-	- `bind_ip=0.0.0.0` (sau comenteaza linia) - implicit Mongo nu permite accesul decat de pe masina locala)
+Editeaza urmatorii parametri:
+- `dbpath=/media/mongodrive/data`
+- `logpath=/media/mongodrive/mongod.log`
+- `bind_ip=0.0.0.0` (sau comenteaza linia) - implicit Mongo nu permite accesul decat de pe masina locala)
 
 
-- Creaza folder-ul 'data'
+**2. Creaza folder-ul 'data'**
 
  ```
 sudo mkdir /media/mongodrive/data
  ```
 
-- Schimba owner-ul la folder-ul 'mongodrive' (root --> mongodb)
+**3. Schimba owner-ul la folder-ul 'mongodrive'** (root --> mongodb)
 
  ```
 sudo chown -R mongodb:mongodb /media/mongodrive/
  ```
-  - `root` = contul sub care rulezi atunci cand esti loginat in consola 
-  - `mongodb` = contul sub care ruleaza implicit serviciul mongodb
+
+- `root` = contul sub care rulezi atunci cand esti loginat in consola 
+- `mongodb` = contul sub care ruleaza implicit serviciul mongodb
 
 
-- Optional. Poti vedea noile drepturi cu:
+**4. Optional. Verifica noile drepturi** cu:
 
  ```
 cd /media/mongodrive
@@ -207,13 +209,14 @@ ls -l
 
  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/09-04-ubuntu4.png)
 
-- Restarteaza serviciul `mongod`. Asta trebuie facut dupa orice modificare a fisierului `mongod.conf`:
+**5. Restarteaza serviciul `mongod`.** Asta trebuie facut dupa orice modificare a fisierului `mongod.conf`:
 
  ```
 sudo service mongod restart
  ```
 
-- Optional. Rulezi inca odata comanda `ls -l` (din folder-ul `/media/mongodrive`) si ar trebui sa apara deja fisierul `mongod.log`. Totodata, in folder-ul `data` ar trebui sa apara primele fisiere de mongo:
+**6. Optional. Testezi rezultatul final.** 
+Rulezi inca odata comanda `ls -l` (din folder-ul `/media/mongodrive`) si ar trebui sa apara deja fisierul `mongod.log`. Totodata, in folder-ul `data` ar trebui sa apara primele fisiere de mongo:
 
  ```
 cd data
