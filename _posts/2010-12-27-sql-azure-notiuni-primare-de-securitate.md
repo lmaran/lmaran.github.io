@@ -22,7 +22,7 @@ Exemple de obiecte la nivel de database:
 
 Exemple de obiecte la nivel de server:
 
-    `SELECT * from sys.objects //conectat in prealabil la "master"`
+    SELECT * from sys.objects //conectat in prealabil la "master"
 
 ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2010/Objectsdb.png)
 
@@ -115,7 +115,7 @@ Vom crea mai jos un rol numit db_executor caruia ii vom atribui permisiunea de E
 Rol 7= db_executor; rol 16384=db_owner
 
 ## Concluzii ##
-Conceptele si comenzile din SQL Azure sunt asemanatoare celor din varianta "On-premise". Putem spune ca sunt chiar aceleasi, dar intr-o forma  trunchiata. Un aspect diferit este contextul in care trebui rulate anumite comenzi, context care nu poate fi schimbat prin comanda "USE" ca  si in varianta clasica si presupune realizarea de conexiuni diferite la db. "Master" (pt. comenzile care manipuleaza obiecte de tip server) respectiv conexiuni la db. “de lucru” (pt. comenzi ce vizeaza obiecte specifice unei anumite baze de date).
+Conceptele si comenzile din SQL Azure sunt asemanatoare celor din varianta "On-premise". Putem spune ca sunt chiar aceleasi, dar intr-o forma  trunchiata. Un aspect diferit este contextul in care trebui rulate anumite comenzi, context care nu poate fi schimbat prin comanda "USE" ca  si in varianta clasica si presupune realizarea de conexiuni diferite la db. "Master" (pt. comenzile care manipuleaza obiecte de tip server) respectiv conexiuni la db. "de lucru" (pt. comenzi ce vizeaza obiecte specifice unei anumite baze de date).
 
 Detalii [aici](http://mscerts.programming4.us/sql_server/SQL%20Azure%20%20%20Security%20-%20Access%20Control.aspx).
 
