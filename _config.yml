@@ -1,9 +1,16 @@
 url: http://maran.ro
 name: Lucian Maran
+
 markdown: redcarpet
+#markdown: kramdown
+
 highlighter: rouge
 # highlighter: pygments
+
 permalink: /:year/:month/:day/:title/
+
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables",     "with_toc_data"]
 
 # Disqus Comments
 disqus_short_name: lmaran
