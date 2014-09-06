@@ -9,9 +9,6 @@ highlighter: rouge
 
 permalink: /:year/:month/:day/:title/
 
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables",     "with_toc_data"]
-
 # Disqus Comments
 disqus_short_name: lmaran
 disqus_show_comment_count: true
