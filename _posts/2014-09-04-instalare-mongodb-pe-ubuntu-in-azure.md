@@ -83,18 +83,20 @@ Am sa prezint in continuare o "compilatie" personala inspirata din mai multe  su
 
 - Verifica lista cu disk-urile instalate (ca sa stii ce disk sa partitionezi). 
 
-        sudo lshw -C disk
+ ```
+sudo lshw -C disk
+ ```
 
  In Azure, primul disk atasat va fi, de regula, al 3-lea disk (ex: \dev\sdc):
 
-
 - Partitioneaza disk-ul identificat anterior (voi pp. in continuare ca noul disk = \dev\sdc)
 
+ ```
+ sudo fdisk /dev/sdc
+ ```
 
-        sudo fdisk /dev/sdc 
-
- - type "n" -> creaza o noua partitie
- - type "p" --> primary partition
+  - type "n" -> creaza o noua partitie
+  - type "p" --> primary partition
  - enter --> partition 1
  - enter --> first sector (default)
  - enter --> last sector (default) - cream o sg. partitie pt. tot disk-ul
