@@ -16,29 +16,31 @@ Exemplu de apel cu spatiu pe post de ch. de delimitare:
 
 **Codul**:
 
-    CREATE FUNCTION [dbo].[_GetTableFromString]
-    (@InputString NVARCHAR(max), @SplitChar CHAR(1))
-    RETURNS @ValuesList TABLE
-    	(
-    		id INT IDENTITY(1,1),
-    		param NVARCHAR(255)
-    	)
-    AS
-    
-    BEGIN
-    	DECLARE @ListValue NVARCHAR(max)
-    	SET @InputString = ltrim(rtrim(@InputString))+ @SplitChar
-    	WHILE len(@InputString)>0 and CHARINDEX(@SplitChar, @InputString)>0
-    	--inseamna ca am cel putin un cuvant si acesta este urmat de un spatiu
-    	BEGIN
-    		--extrag primul cuvant
-    		SELECT @ListValue = SUBSTRING(@InputString , 1, CHARINDEX(@SplitChar, @InputString)-1)
-    		--adauga cuvantul in tabela
-    		INSERT INTO @ValuesList	SELECT @ListValue
-    		--reinitializez sirul eliminand primul cavant
-    		SELECT @InputString = ltrim(SUBSTRING(@InputString, len(@listValue)+1, len(@InputString)-len(@listValue)+1))
-    	END
-    RETURN
-    END
+``` sql
+CREATE FUNCTION [dbo].[_GetTableFromString]
+(@InputString NVARCHAR(max), @SplitChar CHAR(1))
+RETURNS @ValuesList TABLE
+	(
+		id INT IDENTITY(1,1),
+		param NVARCHAR(255)
+	)
+AS
+
+BEGIN
+	DECLARE @ListValue NVARCHAR(max)
+	SET @InputString = ltrim(rtrim(@InputString))+ @SplitChar
+	WHILE len(@InputString)>0 and CHARINDEX(@SplitChar, @InputString)>0
+	--inseamna ca am cel putin un cuvant si acesta este urmat de un spatiu
+	BEGIN
+		--extrag primul cuvant
+		SELECT @ListValue = SUBSTRING(@InputString , 1, CHARINDEX(@SplitChar, @InputString)-1)
+		--adauga cuvantul in tabela
+		INSERT INTO @ValuesList	SELECT @ListValue
+		--reinitializez sirul eliminand primul cavant
+		SELECT @InputString = ltrim(SUBSTRING(@InputString, len(@listValue)+1, len(@InputString)-len(@listValue)+1))
+	END
+RETURN
+END
+```
 
 [Aici](http://maran.ro/2011/01/30/sql-2008-procedura-filtertablebystring/) este un exemplu in care folosesc aceasta functie. 
