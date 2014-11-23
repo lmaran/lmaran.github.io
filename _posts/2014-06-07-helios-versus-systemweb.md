@@ -92,7 +92,7 @@ Daca ai ales un **host** de tip IIS, poti opta in continuare pt. unul din cele 2
 
 Pt. masurarea performantelor am creat creat o aplicatie simpla de tip Owin plecand de la un "Empty" Asp.Net project. Tot codul se afla in fisierul Startup.cs:
 
-```
+```csharp
 using Owin;
 
 namespace Helios
