@@ -31,13 +31,15 @@ Observatii:
 
 ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/testing-jekyll.png)
 
-  OBS: daca primesti un mesaj de eroare legat de libraria **pygments** poti sa mergi in fisierul "_config.yml" (din radacina blog-ului) si sa setezi `pygments = false`. Pygments este o librarie Python folosita pt. formatarea codului.
+  OBS: daca primesti un mesaj de eroare legat de libraria **pygments** poti sa mergi in fisierul "_config.yml" (din radacina blog-ului) si sa setezi un alt sintax highlighter. Ex: `highlighter: rouge`. Pygments este o librarie Python folosita pt. formatarea codului. Daca vrei sa o folosesti, asigura-te ca ai Python instalat (Python 2.7 fiindca cu Python 3 se pare ca sunt [ceva probleme](http://stackoverflow.com/questions/17364028/jekyll-on-windows-pygments-not-working)) si ca exista o cale in PATH catre python.exe.
 
 - In final, site-ul functional se poate verifica la adresa: "_http://localhost:4000_":
 
 ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/testing-jekyll-url.png)
 
 ## Monitorizarea automata a modificarilor (optional)
+
+**UPDATE** (23.11.2014) - in versiunile mai noi, monitorizarea automata se face implicit (nu mai este necesar param. `-w`)
 
 - `jekyll serve -w` lansat cu parametrul _-w (watch)_, serviciul Jekyll reconstruieste site-ul "on-the-fly", pe masura ce apar modificari.
 
@@ -46,3 +48,9 @@ Observatii:
 ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/jekyll-watch.png)
 
 In acest moment este suficient sa dai un refresh la browser daca vrei sa pre-vizualizezi modificarile facute (nu mai trebuie sa repornesti Jekyll-ul).
+
+## Comenzi utile
+
+- `github-pages versions` - afiseaza versiunea tuturor pachetelor folosite de `github-pages versions`. Ex:
+
+![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/2014-11-23-github-pages-versions.jpg)

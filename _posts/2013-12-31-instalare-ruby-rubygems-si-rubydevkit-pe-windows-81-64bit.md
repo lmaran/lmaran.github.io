@@ -6,6 +6,8 @@ comments: true
 categories: jekyll
 ---
 
+**UPDATE** (23.11.2014). Ultima instalare am facut-o cu versiunea `Ruby 2.0.0-p598 (x64)`. O lista de alte versiuni compatibile am gasit [aici](http://jekyll-windows.juthilo.com/).
+
 
 ## 1. Instalare Ruby si RubyGems
 
