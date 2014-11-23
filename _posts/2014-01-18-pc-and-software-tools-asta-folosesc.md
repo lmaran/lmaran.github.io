@@ -30,6 +30,8 @@ Imi propun sa tin actualizata lista de mai jos, asa ca o voi modifica de cate or
 - [Process Explorer](http://technet.microsoft.com/en-us/sysinternals/bb896653) (`cinst procexp`) - imi arata ce proces foloseste un anumit fisier (util atunci cand nu-l pot sterge)
 - [PNGGauntlet](http://pnggauntlet.com/) - comprima PNG-uri fara a pierde din calitate. Castigul de spatiu este de aprox 30% (masurat)
 - [ConEmu](https://code.google.com/p/conemu-maximus5/) (`cinst ConEmu`) - wrapper (GUI) peste diferite console: "cmd.exe", "powershel.exe" etc. Suporta tabs, resize window, Ctrl+V etc. Detalii [aici](http://www.hanselman.com/blog/ConEmuTheWindowsTerminalConsolePromptWeveBeenWaitingFor.aspx). (**new**)
+- [WinSCP](http://winscp.net/) (`cinst - winscp`) - File manager de Linux (SSH client), rulat de pe Windows (**new**)
+- [WPS Office](http://www.wps.com/) - in loc de MS Office. (**new**)
  
 ## Software tools ##
 
