@@ -3,7 +3,7 @@ name: Lucian Maran
 
 markdown: redcarpet
 redcarpet:
-  extensions: ["tables"]
+  extensions: ["tables","strikethrough"]
 #markdown: kramdown
 
 #highlighter: rouge
