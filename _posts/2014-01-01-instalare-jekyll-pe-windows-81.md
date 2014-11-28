@@ -51,6 +51,6 @@ In acest moment este suficient sa dai un refresh la browser daca vrei sa pre-viz
 
 ## Comenzi utile
 
-- `github-pages versions` - afiseaza versiunea tuturor pachetelor folosite de `github-pages versions`. Ex:
+- `github-pages versions` - afiseaza versiunea tuturor pachetelor folosite de `github-pages versions`. In final, poti compara rezultatul cu valorile din [aceasta lisa](https://pages.github.com/versions/).
 
 ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/2014-11-23-github-pages-versions.jpg)
