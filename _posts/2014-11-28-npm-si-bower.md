@@ -14,7 +14,7 @@ Am remarcat, intamplator, ca exista o asemanare intre sintaxa comenzilor pt. cel
 ### Manage this PM ###
 
 |Command|NPM|Bower|Notes|
-|---|:---:|---:|---|
+| --- | --- | --- | --- |
 |Install NPM/Bower|npm install npm -g|npm install bower -g|npm comes also with Node.js|
 |Get version|npm -v|bower -v|-|
 |Update NPM/Bower|npm update npm -g|npm update bower -g|for Windows, reinstalling Node.js might be a better option|
