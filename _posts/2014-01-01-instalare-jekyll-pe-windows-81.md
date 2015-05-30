@@ -7,9 +7,22 @@ categories: jekyll
 ---
 
 
-Asigura-te ca ai deja instalat **Ruby**, **RubyGems** si **RubyDevKit**. Pentru detalii poti consulta [precedentul articol](http://maran.ro/2013/12/31/instalare-ruby-rubygems-si-rubydevkit-pe-windows-81-64bit/).
+**Update (30.05.2015)**
+
+Am reinstalat Jekyll folosind [bundler](http://bundler.io) (in loc de `gem install github-pages`), asa cum e descris [aici](https://help.github.com/articles/using-jekyll-with-pages/#installing-jekyll).
+In continuare pot apela:
+
+- `bundle install` - pt a instala automat toate gem-urile declarate in fisierul `Gemfile`
+- `bundle update` si `bundle uninstall` - idem pt. update/uninstall
+- `bundle exec jekyll serve` - ruleaza site-ul
+
+Ca rezultat, pachetele instalate (ruleaza `github-pages versions`) au fost identice ca versiune cu [pachetele folosite pe github](https://pages.github.com/versions/).
+
+----
 
 ## Instalare
+
+Asigura-te ca ai deja instalat **Ruby**, **RubyGems** si **RubyDevKit**. Pentru detalii poti consulta [precedentul articol](http://maran.ro/2013/12/31/instalare-ruby-rubygems-si-rubydevkit-pe-windows-81-64bit/).
 
 Jekyll se poate instala ca si un Gem independent, dar prefer ca instalarea lui sa se faca prin pachetul **github-pages**. In felul acesta, pe langa Jekyll se instaleaza si toate dependentele necesare, rezultand astfel un mediu de productie cat mai apropiat de Github.
     

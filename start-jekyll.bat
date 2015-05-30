@@ -1,2 +1,2 @@
-cd C:\Data\Proiecte\lmaran.github.io
+cd C:\Data\Proiecte\Proiecte-Active\lmaran.github.io
 jekyll serve
