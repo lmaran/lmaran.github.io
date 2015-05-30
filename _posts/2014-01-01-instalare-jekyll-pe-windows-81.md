@@ -7,7 +7,7 @@ categories: jekyll
 ---
 
 
-**Update (30.05.2015)**
+**Update (30.05.2015)** 
 
 Am reinstalat Jekyll folosind [bundler](http://bundler.io) (in loc de `gem install github-pages`), asa cum e descris [aici](https://help.github.com/articles/using-jekyll-with-pages/#installing-jekyll).
 In continuare pot apela:
