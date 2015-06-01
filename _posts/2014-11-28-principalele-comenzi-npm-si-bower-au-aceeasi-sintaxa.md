@@ -32,7 +32,7 @@ Am remarcat, intamplator, ca exista o asemanare intre sintaxa comenzilor pt. cel
 
 | Action | NPM | Bower | Obs |
 | ------ | --- | ----- | --- |
-| Install local | `npm install [package]` | `bower install [package]` | |
+| Install local | `npm install [package]` | `bower install [package]` | "i" (shortcut)|
 | Install global | `npm install [package] -g` | N/A | |
 | Install local, all packages | `npm install` | `bower install` | based on package.json / bower.json |
 | Install global, all packages | `npm install -g` | N/A | based on package.json / bower.json |
@@ -42,7 +42,7 @@ Am remarcat, intamplator, ca exista o asemanare intre sintaxa comenzilor pt. cel
 | Action | NPM | Bower | Obs |
 | ------ | --- | ----- | --- |
 | Save pck reference in `dependencies` section | `--save` | `--save` | |
-| Save only in `devDependencies` section | `--save-dev` | `--save-dev` | |
+| Save only in `devDependencies` section | `--save-dev` | `--save-dev` | "-D" (shortcut)|
 | Do not install pck from `devDependencie` section | N/A | `--production` | |
 | Fetch remote resources even if a local copy exists | `--force` | N/A | |
 
