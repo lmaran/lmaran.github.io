@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Configurarea ConEmu pentru Web Developemnt "
+title:  "Configurarea ConEmu pentru Web Developemnt"
 date:   2015-05-30 00:00:01
 comments: true
 categories: DevOps
