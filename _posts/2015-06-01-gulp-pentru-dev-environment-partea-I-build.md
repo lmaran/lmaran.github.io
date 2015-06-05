@@ -6,7 +6,7 @@ comments: true
 categories: DevOps
 ---
 
-De ceva vreme, cel putin pentru proiectele "de acasa", mi-am propus sa evit clasicul VisualStudio. Am incercat pe rand cu Sublime, Brackets si, in final, am ramas la [VisualStudio Code](https://code.visualstudio.com/). Procesul de **build** sunt nevoit acum sa-l implementez de la zero, iar pentru asta am ales sa ma folosesc de [Gulp](http://gulpjs.com/). Cand spun **build** pe dev. environment ma gandesc la 2 componente:
+De ceva vreme, cel putin pentru proiectele Node.js/Angular, mi-am propus sa evit clasicul VisualStudio. Am incercat pe rand cu Sublime, Brackets si, in final, am ramas la [VisualStudio Code](https://code.visualstudio.com/). Procesul de **build** sunt nevoit acum sa-l implementez de la zero, iar pentru asta am ales sa ma folosesc de [Gulp](http://gulpjs.com/). Cand spun **build** pe dev. environment ma gandesc la 2 componente:
 
 - procesul de `build` propriu-zis, care se executa la pornire:
    - compileaza less -> css
