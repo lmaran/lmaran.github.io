@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "SQL 2008: functia GetTableFromString (Google Style)"
-date:   2011-01-29 00:00:02
+title: "SQL 2008: functia GetTableFromString (Google Style)"
+date: 2011-01-29 00:00:02
 comments: true
 categories: MSSQL
 ---
@@ -12,11 +12,11 @@ Functia de mai jos returneaza un tabel in care, pe o coloana sunt depozitate toa
 
 Exemplu de apel cu spatiu pe post de ch. de delimitare:
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/GetTbl.png)
+![](/assets/images/2011/GetTbl.png)
 
 **Codul**:
 
-``` sql
+```sql
 CREATE FUNCTION [dbo].[_GetTableFromString]
 (@InputString NVARCHAR(max), @SplitChar CHAR(1))
 RETURNS @ValuesList TABLE
@@ -43,4 +43,4 @@ RETURN
 END
 ```
 
-[Aici](http://maran.ro/2011/01/30/sql-2008-procedura-filtertablebystring/) este un exemplu in care folosesc aceasta functie. 
+[Aici](http://maran.ro/2011/01/30/sql-2008-procedura-filtertablebystring/) este un exemplu in care folosesc aceasta functie.

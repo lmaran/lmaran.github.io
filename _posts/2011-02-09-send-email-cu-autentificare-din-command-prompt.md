@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Send email, cu autentificare, din command prompt"
-date:   2011-02-09 00:00:01
+title: "Send email, cu autentificare, din command prompt"
+date: 2011-02-09 00:00:01
 comments: true
 categories: IT-tools
 ---
@@ -12,19 +12,19 @@ Un telnet la serverul si portul de SMTP imi confirma ca am conectivitate, portur
 
 Un astfel de dialog arata astfel:
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/cmd_send_email.png)
+![](/assets/images/2011/cmd_send_email.png)
 
 **Rezultatul:**
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/rezultatSendEmail.png)
+![](/assets/images/2011/rezultatSendEmail.png)
 
-Comenzile introduse de client sunt subliniate cu *albastru* iar raspunsul primit de la server, cu negru. Comenzile sunt comentate cu *verde*. 
+Comenzile introduse de client sunt subliniate cu _albastru_ iar raspunsul primit de la server, cu negru. Comenzile sunt comentate cu _verde_.
 
-Partea mai putin cunoscuta este sectiunea de autentificare, incercuita cu *rosu*. Si nu cred ca exista, in lumea reala, servere de email care sa trimita emailuri pt. utilizatori neautentificati.
+Partea mai putin cunoscuta este sectiunea de autentificare, incercuita cu _rosu_. Si nu cred ca exista, in lumea reala, servere de email care sa trimita emailuri pt. utilizatori neautentificati.
 
-Numele si parola nu pot fi introduse in text clar. Ele trebuiesc intai codificate cu algoritmul Base64. Pt. asta am folosit utilitarul `EB64.exe`   disponibil [aici](http://www.petri.co.il/smtp-authentication.htm). Se descarca si se ruleaza direct din cmd, cu sintaxa:
+Numele si parola nu pot fi introduse in text clar. Ele trebuiesc intai codificate cu algoritmul Base64. Pt. asta am folosit utilitarul `EB64.exe` disponibil [aici](http://www.petri.co.il/smtp-authentication.htm). Se descarca si se ruleaza direct din cmd, cu sintaxa:
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/codificareBase64.png)
+![](/assets/images/2011/codificareBase64.png)
 
 Asta e tot!
 

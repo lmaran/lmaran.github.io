@@ -1,45 +1,44 @@
 ---
 layout: post
-title:  "EF4 Code First CTP5 si SQL Azure"
-date:   2011-01-29 00:00:01
+title: "EF4 Code First CTP5 si SQL Azure"
+date: 2011-01-29 00:00:01
 comments: true
 categories: SQLAzure EF
 ---
 
-**UPDATE** (25.09.2012) – Codul aferent versiunii EF5 este [aici](http://pastebin.com/688DhJXz). Evident, in codul atasat trebuie actualizate valorile pt. conexiunea la SQL Azure: *mysrvname*, *myuser*, *mypassword*.
+**UPDATE** (25.09.2012) – Codul aferent versiunii EF5 este [aici](http://pastebin.com/688DhJXz). Evident, in codul atasat trebuie actualizate valorile pt. conexiunea la SQL Azure: _mysrvname_, _myuser_, _mypassword_.
 
 Abordarile **Database First** si **Model First** pe care le suporta Entity Framework sunt compatibile de ceva vreme cu SQL Azure. Fiindca pana in momentul in care scriu acest articol nu am gasit nici un exemplu care sa-mi confirme daca si recenta abordare Code First lucreaza cu SQL Azure, am decis sa testez singur acest lucru.
 
-Din VS2010 am creat o 'Console Application'. Codul este simplist: 2 clase POCO care modeleaza entitatile *Elevi* si *Clase* si apoi clasa *ScoalaContext* care face legatura cu baza de date. Fiindca pluralizarea se face automat dupa regulile gramaticii engleze, am preferat sa stabilesc manual numele tabelelor. Desi nu era necesar, am inlocuit si schema implicita (*dbo*) cu una proprie (*MySchema*). Pt. a fi mai usor de urmarit codul, Connection String-ul (CN) l-am scris alaturi de restul codului si i-am adaugat atributul `MultipleActiveResultSets=True`. In final, la sectiunea principala am adaugat cativa elevi (si clasele din care fac parte) pe care ulterior ii afisez.
+Din VS2010 am creat o 'Console Application'. Codul este simplist: 2 clase POCO care modeleaza entitatile _Elevi_ si _Clase_ si apoi clasa _ScoalaContext_ care face legatura cu baza de date. Fiindca pluralizarea se face automat dupa regulile gramaticii engleze, am preferat sa stabilesc manual numele tabelelor. Desi nu era necesar, am inlocuit si schema implicita (_dbo_) cu una proprie (_MySchema_). Pt. a fi mai usor de urmarit codul, Connection String-ul (CN) l-am scris alaturi de restul codului si i-am adaugat atributul `MultipleActiveResultSets=True`. In final, la sectiunea principala am adaugat cativa elevi (si clasele din care fac parte) pe care ulterior ii afisez.
 
-## Etapele parcurse pt. testare: ##
+## Etapele parcurse pt. testare:
 
 1. Verific situatia actuala din cloud si ma asigur ca nu exista nici o DB.
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/SqlAzure1.png)
+![](/assets/images/2011/SqlAzure1.png)
 
 2. Scriu si rulez codul (vezi la final).
 
 3. Rezultatul de pe ecran la prima rulare:
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/3Elevi.png)
+![](/assets/images/2011/3Elevi.png)
 
-4. Confirm ca datele au fost stocate in SQL Azure. La prima rulare s-au creat DB, schema, tabelele aferente entitatilor, tabela *EdmMetadata* etc
+4. Confirm ca datele au fost stocate in SQL Azure. La prima rulare s-au creat DB, schema, tabelele aferente entitatilor, tabela _EdmMetadata_ etc
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/DBAzure.png)
+![](/assets/images/2011/DBAzure.png)
 
 5. Rulez programul a 2-a oara. Infrastructura se pastreaza iar datele se adauga la cele existente:
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/6Elevi1.png)
+![](/assets/images/2011/6Elevi1.png)
 
 6. Datele:
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/TblElevi.png)
+![](/assets/images/2011/TblElevi.png)
 
 7. ...si codul (totul este intr-un singur fisier):
 
-
-``` csharp
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

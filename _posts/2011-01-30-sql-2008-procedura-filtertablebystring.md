@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "SQL 2008: procedura FilterTableByString (Google Style)"
-date:   2011-01-30 00:00:01
+title: "SQL 2008: procedura FilterTableByString (Google Style)"
+date: 2011-01-30 00:00:01
 comments: true
 categories: MSSQL
 ---
@@ -10,11 +10,11 @@ Procedura cauta intr-o coloana a unei tabele dupa mai multe cuvinte introduse in
 
 **Exemplu**:
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/lucimar.png)
+![](/assets/images/2011/lucimar.png)
 
 **Codul:**
 
-``` sql
+```sql
 CREATE PROCEDURE [dbo].[_FilterTableByString]
 @CuvinteCautare varchar(100), @Coloana varchar(100), @Tabela varchar(100)
 AS
@@ -44,4 +44,4 @@ BEGIN
 END
 ```
 
-In codul de mai sus am folosit functia _GetTableFromString, implementata [aici](http://maran.ro/2011/01/29/sql-2008functia-gettablefromstring).
+In codul de mai sus am folosit functia \_GetTableFromString, implementata [aici](http://maran.ro/2011/01/29/sql-2008functia-gettablefromstring).

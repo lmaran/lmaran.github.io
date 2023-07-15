@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Visual Studio - doua plugin-uri utile"
-date:   2013-11-23 00:00:01
+title: "Visual Studio - doua plugin-uri utile"
+date: 2013-11-23 00:00:01
 comments: true
 categories: Dev-tools
 ---
@@ -16,6 +16,6 @@ Chiar daca scrisul in limba Engleza nu iti ridica probleme, pot sa apara greseli
 
 Daca codul pe care incerci sa-l scrii, sau sa-l intelegi, are mai multe niveluri de indentare, atunci o mai buna delimitare vizuala s-ar putea sa te ajute. Mai ales pentru blocuri de cod care incep pe o pagina si se termina pe alta.
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2013/TwoVSPlugins.png)
+![](/assets/images/2013/TwoVSPlugins.png)
 
 PS: Plugin-urile nu necesita niciun fel de configurare. Doar se executa fisierul descarcat si se restarteaza VS...asta-i tot!

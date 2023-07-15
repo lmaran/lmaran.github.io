@@ -10,7 +10,7 @@ In contextul dezvoltarii unei aplicatii web bazata pe javascript (Node.js), term
 
 Daca vrei sa sari peste explicatii, poti accesa direct codul sursa de [aici](https://github.com/lmaran/Gulp-starter/blob/master/gulpfile.js).
 
-![](/_assets/images/2015/06-05-gulp_watch_and_livereload.png)
+![](/assets/images/2015/06-05-gulp_watch_and_livereload.png)
 
 Asa cum reiese si din figura, monitorizarea client-side se realizeaza cu [gulp.watch()](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob--opts-tasks-or-gulpwatchglob--opts-cb) iar cea server-side cu [nodemon](https://github.com/remy/nodemon). In ambele cazuri, in momentul in care se detecteaza o modificare in codul sursa, se trimite o notificare server-ului de [Livereload](https://github.com/vohof/gulp-livereload) care, mai departe, va comanda un refresh in browser.
 

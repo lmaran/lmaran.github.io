@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "DNS: Evita sa folosesti CNAME!"
-date:   2012-11-23 00:00:01
+title: "DNS: Evita sa folosesti CNAME!"
+date: 2012-11-23 00:00:01
 comments: true
 categories: Dev-infrastructure Azure
 ---
@@ -10,13 +10,13 @@ De ce? Pentru ca iti pasa de performanta aplicatiei tale. Simplu, rezolutia de n
 
 Am [monitorizat](https://www.pingdom.com/), pe o perioada de 20 de ore, cu o cadenta de 1 minut, acelasi site, folosind cele 2 tipuri de inregistrari:
 
-**Caz 1:**  *www.idgenerator.net*  ->  *appsfarm1.cloudapp.net* (**CNAME** record)
+**Caz 1:** *www.idgenerator.net* -> _appsfarm1.cloudapp.net_ (**CNAME** record)
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2012/cname-rec.png)
+![](/assets/images/2012/cname-rec.png)
 
-**Caz 2:**  *api.idgenerator.net*  ->  *168.63.64.179* (**A** record)
+**Caz 2:** _api.idgenerator.net_ -> _168.63.64.179_ (**A** record)
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2012/a-rec.png)
+![](/assets/images/2012/a-rec.png)
 
 In al 2-lea caz, timpul de raspuns s-a dovedit **cu 40% mai mic**. Desigur, cu cat creste complexitatea paginii, ponderea timpului alocat rezolutiei de nume, scade. Ramane insa o valoare absoluta de **50-100 ms** care nu merita ignorata.
 

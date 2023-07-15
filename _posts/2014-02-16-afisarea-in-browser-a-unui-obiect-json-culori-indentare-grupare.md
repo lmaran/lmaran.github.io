@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Afisarea in browser a unui obiect JSON: culori, indentare, grupare"
-date:   2014-02-16 00:00:01
+title: "Afisarea in browser a unui obiect JSON: culori, indentare, grupare"
+date: 2014-02-16 00:00:01
 comments: true
 categories: Infrastructure
 ---
 
-## Definirea problemei ##
+## Definirea problemei
 
 Atunci cand faci debug si lucrezi cu servicii REST simple (GET, fara autentificare) nu ai nevoie de tool-uri specializate (fiddler, postman etc). E suficient un browser, dar pt. o vizualizare optima a rezultatuilui ai nevoie de cateva ajustari:
 
@@ -15,11 +15,11 @@ Atunci cand faci debug si lucrezi cu servicii REST simple (GET, fara autentifica
 
 Am modificat controller-ul "Values" dintr-un proiect WebAPI default a.i. sa returneze doua obiecte ceva mai complexe. Rezultatul in cele 3 browser-e (Chrome, FF, IE) este urmatorul:
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/plain-json-chrome-ff-ie.png)
+![](/assets/images/2014/plain-json-chrome-ff-ie.png)
 
-Se observa ca rezultatul este interpretat ca un simplu text (string), fara nicio formatare. Putem face mai lizibil acest text configurand corespunzator  server-ul, browser-ul sau ambele.
+Se observa ca rezultatul este interpretat ca un simplu text (string), fara nicio formatare. Putem face mai lizibil acest text configurand corespunzator server-ul, browser-ul sau ambele.
 
-### Solutia 1. Formatarea rezultatului prin configurarea server-ului ###
+### Solutia 1. Formatarea rezultatului prin configurarea server-ului
 
 Ce **pot suporta** prin aceasta metoda:
 
@@ -43,33 +43,33 @@ settings.ContractResolver = new CamelCasePropertyNamesContractResolver(); // Cam
 
 Chrome si FF vor fi happy cu aceste setari:
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/webapi-json-formatter-chrome.png)
+![](/assets/images/2014/webapi-json-formatter-chrome.png)
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/webapi-json-formatter-ff.png)
+![](/assets/images/2014/webapi-json-formatter-ff.png)
 
 Din pacate, pentru IE au efect doar setarile de camelCase:
 
-![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/webapi-json-formatter-ie.png)
+![](/assets/images/2014/webapi-json-formatter-ie.png)
 
-## Solutia 2. Formatarea rezultatului din browser ##
+## Solutia 2. Formatarea rezultatului din browser
 
-### IE ###
+### IE
 
 - pentru IE nu stiu niciun plugin care sa poata fi folosit pt. formatarea JSON-ului. Poate tu?
 
-### Chrome ###
+### Chrome
 
 - instaleaza extensia [JsonView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc), iar rezultatul va arata asa:
 
- ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/webapi-json-formatter-chrome-nice.png)
+![](/assets/images/2014/webapi-json-formatter-chrome-nice.png)
 
-### FF ###
+### FF
 
 - instaleaza aceeasi extensie [JsonView](https://addons.mozilla.org/en-us/firefox/addon/jsonview/) (varianta FF), iar rezultatul va arata identic ca in Chrome:
 
- ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/webapi-json-formatter-ff-nice.png)
+![](/assets/images/2014/webapi-json-formatter-ff-nice.png)
 
 Obs:
 
-- extensia *JsonView* **nu** realizeaza si transformarea in camelCase. Aceasta apare in cele doua imagini pt. ca am pastrat setarile facute pe server (vezi solutia 1)
-- extensia *JsonView* realizeaza si indentarea, indiferent daca ai specificat, sau nu, acest lucru in codul WebApi
+- extensia _JsonView_ **nu** realizeaza si transformarea in camelCase. Aceasta apare in cele doua imagini pt. ca am pastrat setarile facute pe server (vezi solutia 1)
+- extensia _JsonView_ realizeaza si indentarea, indiferent daca ai specificat, sau nu, acest lucru in codul WebApi

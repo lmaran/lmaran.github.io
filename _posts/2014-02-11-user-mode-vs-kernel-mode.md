@@ -1,57 +1,57 @@
 ---
 layout: post
-title:  "User Mode vs. Kernel Mode"
-date:   2014-02-11 00:00:01
+title: "User Mode vs. Kernel Mode"
+date: 2014-02-11 00:00:01
 comments: true
 categories: Infrastructure, IIS
 ---
 
 Pe aproape orice diagarama care descrie **arhitectura IIS** apar cele doua notiuni din titlu. Spre axemplu: [aici](http://www.iis.net/learn/get-started/introduction-to-iis/introduction-to-iis-architecture), [aici](http://blogs.msdn.com/b/friis/archive/2012/08/13/iis-7-5-architecture-and-components-part-1.aspx) sau [aici](http://www.codeproject.com/Articles/28693/Deploying-ASP-NET-Websites-on-IIS-7-0). Fiindca a trecut ceva vreme de cand am terminat scoala, am decis sa-mi clarific, din nou, aceste notiuni.
 
-Atunci cand vorbim despre `kernel mode` si `user mode` trebuie sa stabilim mai intai contextul. Aceasta terminologie apare atat la nivel de hardware (CPU) cat si la nivel de software (SO, aplicatii), in stransa legatura una cu cealalta. 
+Atunci cand vorbim despre `kernel mode` si `user mode` trebuie sa stabilim mai intai contextul. Aceasta terminologie apare atat la nivel de hardware (CPU) cat si la nivel de software (SO, aplicatii), in stransa legatura una cu cealalta.
 
-## 1. User/Kernel mode - la nivel de CPU ##
+## 1. User/Kernel mode - la nivel de CPU
 
 In principal procesoarele (ma refer aici la Intel) folosesc 2 moduri de operare:
 
-### Kernel mode (Ring 0) ###
+### Kernel mode (Ring 0)
 
- - numit si *protected mode*, *supervizor mode* sau *priviledged mode*
-  - ofera access full la toate resursele (set de instructiuni, porturi, zone de momorie etc)
- - este modul de care beneficiaza SO Windows si driverele care necesita acces direct la resurse (ex: drv. video acceseaza direct memoria video)
- - o eroare aparuta la nivel de kernel blocheaza intregul PC
- 
-### User mode (Ring 3) ###
+- numit si _protected mode_, _supervizor mode_ sau _priviledged mode_
+- ofera access full la toate resursele (set de instructiuni, porturi, zone de momorie etc)
+- este modul de care beneficiaza SO Windows si driverele care necesita acces direct la resurse (ex: drv. video acceseaza direct memoria video)
+- o eroare aparuta la nivel de kernel blocheaza intregul PC
 
- - numit si *real mode*
- - Ring 1 si 2 sunt in general nefolosite
- - ofera un acces limitat la resurse. Spre exemplu, majoritatea proceselor  si aplicatiilor instalate pe Windows implica *comutarea* CPU-ului in `user mode`, primind astfel acces doar la o anumita parte din memorie. Aceasta memorie se mai numeste si **memorie virtuala** pt. ca procesul este "pacalit" sa creada ca i s-a pus la dispozitie intreaga memorie reala. Mai mult, nici adresele pe care le foloseste aplicatia nu sunt de cele reale ci sunt decalate cu un "offset" fata de mem. fizica.
- - neavand zone comune de memorie, orice eroare aparuta la nivelul unui proces nu afecteaza celelalte procese
+### User mode (Ring 3)
 
-Alte observatii: 
+- numit si _real mode_
+- Ring 1 si 2 sunt in general nefolosite
+- ofera un acces limitat la resurse. Spre exemplu, majoritatea proceselor si aplicatiilor instalate pe Windows implica _comutarea_ CPU-ului in `user mode`, primind astfel acces doar la o anumita parte din memorie. Aceasta memorie se mai numeste si **memorie virtuala** pt. ca procesul este "pacalit" sa creada ca i s-a pus la dispozitie intreaga memorie reala. Mai mult, nici adresele pe care le foloseste aplicatia nu sunt de cele reale ci sunt decalate cu un "offset" fata de mem. fizica.
+- neavand zone comune de memorie, orice eroare aparuta la nivelul unui proces nu afecteaza celelalte procese
 
-- *comutarea* CPU-ului dintr-un mod in altul se realizeaza prin intermediul unor [intreruperi](http://en.wikipedia.org/wiki/Inter-processor_interrupt). 
-- operatia de *comutare* implica un anumit "cost" (necesita o salvare a  contextului a.i., la revenire, CPU-ul sa poata continua operatiile din locul in care a ramas)
+Alte observatii:
 
- ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/cpu-rings.png)
+- _comutarea_ CPU-ului dintr-un mod in altul se realizeaza prin intermediul unor [intreruperi](http://en.wikipedia.org/wiki/Inter-processor_interrupt).
+- operatia de _comutare_ implica un anumit "cost" (necesita o salvare a contextului a.i., la revenire, CPU-ul sa poata continua operatiile din locul in care a ramas)
 
-## 2. User/Kernel mode - la nivel de SO (Windows) / aplicatii ##
+![](/assets/images/2014/cpu-rings.png)
 
-### Kernel mode ###
+## 2. User/Kernel mode - la nivel de SO (Windows) / aplicatii
 
- - partea cea mai importanta din SO Windows ([HAL](http://en.wikipedia.org/wiki/Hardware_abstraction)-ul, kernel-ul, majoritatea driverelor etc) opereaza in `kernel mode`. Exceptie fac procesele care se instaleaza odata cu Windows-ul.  
+### Kernel mode
 
-  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/windows-user-and-kernel-mode.png)
+- partea cea mai importanta din SO Windows ([HAL](http://en.wikipedia.org/wiki/Hardware_abstraction)-ul, kernel-ul, majoritatea driverelor etc) opereaza in `kernel mode`. Exceptie fac procesele care se instaleaza odata cu Windows-ul.
 
-### User mode (Ring 3) ###
+![](/assets/images/2014/windows-user-and-kernel-mode.png)
 
- - un cod care ruleaza in `user mode` nu poate apela direct resursele hardware sau memoria. Daca totusi vrea sa o faca, trebuie sa apeleze la apeluri sistem (system API) care ruleaza in `kernel mode`.
- - exceptand procesul numit "System", toate celelalte procese lansate de catre Windows ruleaza in `user mode`.
- - majoritate aplicatiile instalate de utilizator opereaza tot in `user mode`. Exceptie fac, printre altele:
-  - driver-ul video
-  - modulul HTTP.sys din IIS (pt. a asigura o mai buna performanta):
+### User mode (Ring 3)
 
-  ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2014/iis-architecture-user-kernel-mode.png) 
+- un cod care ruleaza in `user mode` nu poate apela direct resursele hardware sau memoria. Daca totusi vrea sa o faca, trebuie sa apeleze la apeluri sistem (system API) care ruleaza in `kernel mode`.
+- exceptand procesul numit "System", toate celelalte procese lansate de catre Windows ruleaza in `user mode`.
+- majoritate aplicatiile instalate de utilizator opereaza tot in `user mode`. Exceptie fac, printre altele:
+- driver-ul video
+- modulul HTTP.sys din IIS (pt. a asigura o mai buna performanta):
+
+![](/assets/images/2014/iis-architecture-user-kernel-mode.png)
 
 Sursele imaginilor si alte referinte:
 

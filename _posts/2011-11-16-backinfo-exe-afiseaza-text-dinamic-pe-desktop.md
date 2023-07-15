@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "BackInfo.exe - afiseaza text dinamic pe desktop"
-date:   2011-11-16 00:00:01
+title: "BackInfo.exe - afiseaza text dinamic pe desktop"
+date: 2011-11-16 00:00:01
 comments: true
 categories: IT-tools
 ---
@@ -10,30 +10,30 @@ Presupun ca administrezi un numar mai mare de servere pe care le accesezi prin T
 
 **BackInfo.exe** este un utilitar care iti permite sa afisezi, pe desktop, informatiile pe care le consideri relevante pentru o anumita masina. In cazul meu, pe langa numele server-ului si adresa de IP, am vrut "sa-mi sara in ochi" daca masina pe care lucrez este una de Productie, una de Test sau una de Dezvoltare. In final am configurat 3 template-uri care genereaza urmatoarele mesaje pe desktop:
 
- ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/image6.png)
+![](/assets/images/2011/image6.png)
 
- ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/image7.png)
+![](/assets/images/2011/image7.png)
 
- ![](https://dl.dropboxusercontent.com/u/43065769/blog/images/2011/image8.png)
+![](/assets/images/2011/image8.png)
 
-## Detalii despre instalare si configurare: ##
+## Detalii despre instalare si configurare:
 
 1. Descarca fisierul “.exe”. Detalii [aici](http://blogs.technet.com/b/johnbaker/archive/2006/02/15/where-can-i-find-the-backinfo-utility.aspx).
 2. Pune intr-un folder fisierele `backinfo.exe` si `backinfo.ini`
-3. Adauga in Startup, pe profilul "All Users",  un shortcut care sa lanseze fisierul backinfo.exe. ("*C:\Documents and Settings\All Users\Start Menu\Programs\Startup*")
+3. Adauga in Startup, pe profilul "All Users", un shortcut care sa lanseze fisierul backinfo.exe. ("_C:\Documents and Settings\All Users\Start Menu\Programs\Startup_")
 
-## Cum functioneza: ##
+## Cum functioneza:
 
 La fiecare operatie de logon se executa fisierul **backinfo.exe** care, pe baza informatiilor din `backinfo.ini` creaza imaginea `backinfo.bmp`. Aceasta imagine o depune in profilul utilizatorului curent, intr-un subfolder stabilit in fisierul .ini.
 
-Informatia despre noul "bmp" se regaseste si in registry, la "*HK_Current_User/Control Panel/Desktop*"
+Informatia despre noul "bmp" se regaseste si in registry, la "_HK_Current_User/Control Panel/Desktop_"
 
 ```
 key name:     Wallpaper
 Data:         C:\DOCUME~1\lmaran\LOCALS~1\Temp\1\backinfo.bmp
 ```
 
-## Setarile mele pentru backinfo.ini: ##
+## Setarile mele pentru backinfo.ini:
 
 ```
 [General]
@@ -95,6 +95,6 @@ Test= ;(fara text)
 ;Color = 16760832 ;(albastru)
 ```
 
-Acesta este fisierul  .ini pentru cazul default (fara informatia despre environment). Daca vrei sa adaugi si un mesaj personalizat, atunci poti modifica comentariile de la ultimele randuri sau poti pastra fisiere de configurare separate pentru fiecare caz in parte.
+Acesta este fisierul .ini pentru cazul default (fara informatia despre environment). Daca vrei sa adaugi si un mesaj personalizat, atunci poti modifica comentariile de la ultimele randuri sau poti pastra fisiere de configurare separate pentru fiecare caz in parte.
 
 Succes!
