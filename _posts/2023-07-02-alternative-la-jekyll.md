@@ -6,6 +6,7 @@ categories: Static site generator
 ---
 [Gitbook](https://www.gitbook.com/pricing#pricingTable), [MdBook](https://rust-lang.github.io/mdBook/) și [Docusaurus](https://docusaurus.io/) sunt printre cele mai bune alternative la Jekyll.
 
+
 # Gitbook
 
 - gratuit (1 user)
@@ -25,6 +26,7 @@ categories: Static site generator
 - in planul free poți customiza doar paleta primară de culori (nu și tema)
 - nu poți elimina de pe fiecare pagină mesajul "last modified 18m ago"
 
+
 # MdBook
 
 - Scris în Rust, de echipa Rust.
@@ -38,12 +40,14 @@ categories: Static site generator
 - search integrat
 - url-uri cu HTML. Exemplu: https://codegangsta.gitbooks.io/building-web-apps-with-go/content/testing/unit_testing/index.html
 
+
 # Docusaurus
 
 - gratuit, mulți îl folosesc (45k github stars)
 - foarte multe facilități - destul de bine cotat
 - pare cam lent (bazat pe React)
 - este tot un static site generator (ca și MdBook), dar mai complex
+
 
 # In loc de concluzie
 
