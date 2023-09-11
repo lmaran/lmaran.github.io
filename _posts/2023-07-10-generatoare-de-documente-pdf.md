@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Generatoare de documente PFD"
-date:   2023-07-02 21:19:24 +0300
+date:   2023-07-10 13:33:29 +0300
 categories: pdf
 ---
 
